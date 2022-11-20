@@ -1,0 +1,19 @@
+# Setup workflow to test code using pytest and poetry
+name: Test
+on : [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Poetry
+        uses: Gr1N/setup-poetry@v4
+        with:
+          poetry-version: 1.2.2
+      - name: Install dependencies
+        run: poetry install
+      - name: Test with pytest
+        run: poetry run pytest tests
