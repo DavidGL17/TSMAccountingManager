@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pysondb = "^1.6.7"
 
 
 [tool.poetry.group.dev.dependencies]
