@@ -15,4 +15,4 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Lint with flake8
-        run: poetry run flake8 app tests
+        run: poetry run flake8 tsmaccountingmanager tests
