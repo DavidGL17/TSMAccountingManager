@@ -7,8 +7,9 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<3.9.7 || >3.9.7,<4.0"
 pysondb = "^1.6.7"
+streamlit = "^1.15.1"
 
 
 [tool.poetry.group.dev.dependencies]
