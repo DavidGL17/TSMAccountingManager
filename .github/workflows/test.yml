@@ -1,6 +1,10 @@
 # Setup workflow to test code using pytest and poetry
 name: Test
-on : [push, pull_request]
+on : 
+  pull_request:
+  push:
+    branches:
+      - master
 jobs:
   test:
     runs-on: ubuntu-latest
