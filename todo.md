@@ -11,4 +11,4 @@ Contains ideas of things to do
 
 ## database
 
-https://dev.to/fredysomy/pysondb-a-json-based-lightweight-database-for-python-ija
+Going with ZODB
