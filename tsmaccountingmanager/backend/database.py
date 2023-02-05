@@ -1,9 +1,8 @@
-"""
-The main part of the backend, which handles requests from the frontend and connects to the database
-"""
-
 from ZODB import DB
+import os
 from persistent.mapping import PersistentMapping
+import transaction
+from .models import Category
 
 
 class SingletonZODB:
@@ -16,12 +15,25 @@ class SingletonZODB:
         return cls._instance
 
     def __init__(self):
-        self.db = DB("data.fs")
+        # check if data folder exists, otherwise create it
+        if not os.path.exists("data"):
+            os.mkdir("data")
+        self.db = DB("data/data.fs")
         self.conn = self.db.open()
         self.dbroot = self.conn.root()
 
         if "app_data" not in self.dbroot:
+            print("Initializing database...")
+            # init the database
             self.dbroot["app_data"] = PersistentMapping()
+            self.dbroot["app_data"]["items"] = PersistentMapping()
+            self.dbroot["app_data"]["categories"] = PersistentMapping()
+            self.dbroot["app_data"]["purchases"] = PersistentMapping()
+            self.dbroot["app_data"]["sales"] = PersistentMapping()
+
+            # add a default category
+            self.dbroot["app_data"]["categories"]["default"] = Category(name="Default")
+            transaction.commit()
 
 
 zodb = SingletonZODB.instance()

@@ -6,8 +6,7 @@ import uuid
 import enum
 from datetime import datetime
 from persistent import Persistent
-from dataclasses import dataclass
-import pandas as pd
+from dataclasses import dataclass, field
 
 
 class Source(enum.Enum):
@@ -17,28 +16,63 @@ class Source(enum.Enum):
 
 @dataclass
 class Purchase(Persistent):
-    stackSize: int  # how many items are in a stack
-    quantity: int  # the total number of items
-    price: float  # the price of a single item, needs to be converted from copper to gold
-    total: float  # the total price of the sale, quantity * price
-    item: int  # reference to item
-    time: datetime  # the time the purchase was made
+    """
+    A purchase made in the game.
+
+    Attributes:
+        stackSize: how many items are in a stack
+        quantity: the total number of items
+        price: the price of a single item, needs to be converted from copper to gold
+        total: the total price of the sale, quantity * price
+        item: reference to the item (as an id)
+        time: the time the purchase was made
+        source: the source of the purchase
+    """
+
+    stackSize: int
+    quantity: int
+    price: float
+    total: float
+    item: int
+    time: datetime
     source: Source
 
 
 @dataclass
 class Sale(Persistent):
-    stackSize: int  # how many items are in a stack
-    quantity: int  # the total number of items
-    price: float  # the price of a single item, needs to be converted from copper to gold
-    total: float  # the total price of the sale, quantity * price
-    item: int  # reference to item
-    time: datetime  # the time the purchase was made
+    """
+    A sale made in the game.
+
+    Attributes:
+        stackSize: how many items are in a stack
+        quantity: the total number of items
+        price: the price of a single item, needs to be converted from copper to gold
+        total: the total price of the sale, quantity * price
+        item: reference to the item (as an id)
+        time: the time the purchase was made
+        source: the source of the purchase
+    """
+
+    stackSize: int
+    quantity: int
+    price: float
+    total: float
+    item: int
+    time: datetime
     source: Source
 
 
 @dataclass
 class Item(Persistent):
+    """
+    An item in the game.
+
+    Attributes:
+        id: the id of the item
+        name: the name of the item
+        category: the category of the item
+    """
+
     id: int
     name: str
     category: int
@@ -46,7 +80,15 @@ class Item(Persistent):
 
 @dataclass
 class Category(Persistent):
-    id: int
+    """
+    A category of items.
+
+    Attributes:
+        id: the id of the category
+        name: the name of the category
+    """
+
+    id: int = field(init=False)
     name: str
 
     def __post_init__(self):
@@ -83,31 +125,3 @@ def process_price(price: int, quantity: int) -> tuple[float, float]:
     gold = price / 10000
     total = gold * quantity
     return gold, total
-
-
-def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
-    """
-    Processes the expenses dataframe and returns a list of purchases.
-
-    Arguments:
-        expenses {pd.DataFrame} -- The expenses dataframe.
-
-    Returns:
-        list[Purchase] -- A list of purchases.
-    """
-    # TODO create function once the database is set up
-    pass
-
-
-def process_revenue(revenue: pd.DataFrame) -> list[Sale]:
-    """
-    Processes the revenue dataframe and returns a list of sales.
-
-    Arguments:
-        revenue {pd.DataFrame} -- The revenue dataframe.
-
-    Returns:
-        list[Sale] -- A list of sales.
-    """
-    # TODO create function once the database is set up
-    pass
