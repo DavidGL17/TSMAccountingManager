@@ -7,6 +7,7 @@ import enum
 from datetime import datetime
 from persistent import Persistent
 from dataclasses import dataclass, field
+import pytz
 
 
 class Source(enum.Enum):
@@ -106,8 +107,10 @@ def process_timestamp(timestamp: int) -> datetime:
         datetime -- The datetime object.
     """
     delta = timestamp
+    # set it to europe zurich time
+    tz = pytz.timezone("Europe/Zurich")
     date = datetime.fromtimestamp(delta)
-    return date
+    return tz.localize(date, is_dst=None)
 
 
 def process_price(price: int, quantity: int) -> tuple[float, float]:

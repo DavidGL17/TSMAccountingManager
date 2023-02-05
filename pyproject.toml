@@ -12,6 +12,7 @@ python = "^3.10"
 pysondb = "^1.6.7"
 streamlit = "^1.15.1"
 zodb = "^5.8.0"
+pytz = "^2022.7.1"
 
 
 [tool.poetry.group.dev.dependencies]
