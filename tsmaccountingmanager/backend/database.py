@@ -20,7 +20,7 @@ class SingletonZODB:
         self.conn = self.db.open()
         self.dbroot = self.conn.root()
 
-        if not self.dbroot.has_key("app_data"):
+        if "app_data" not in self.dbroot:
             self.dbroot["app_data"] = PersistentMapping()
 
 
