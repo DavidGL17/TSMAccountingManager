@@ -1,6 +1,5 @@
 from tsmaccountingmanager.backend.models import process_timestamp, process_price
 from datetime import datetime
-import pytz
 
 
 def test_process_timestamp():
