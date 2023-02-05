@@ -107,10 +107,10 @@ def process_timestamp(timestamp: int) -> datetime:
         datetime -- The datetime object.
     """
     delta = timestamp
-    # set it to europe zurich time
+    # TODO find a way to get the timezone from the user, probably using the user's locale or a setting
     tz = pytz.timezone("Europe/Zurich")
-    date = datetime.fromtimestamp(delta)
-    return tz.localize(date, is_dst=None)
+    date = datetime.fromtimestamp(delta, tz=tz)
+    return date
 
 
 def process_price(price: int, quantity: int) -> tuple[float, float]:
