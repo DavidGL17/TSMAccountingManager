@@ -4,7 +4,26 @@ The main part of the backend, which handles requests from the frontend and acces
 
 from .database import add_new_item, add_new_purchase, add_new_sale
 import pandas as pd
-from .models import Purchase, Sale, extract_item_id, process_price, process_timestamp, get_correct_source
+from .models import Purchase, Sale, extract_item_id, process_price, process_timestamp, get_correct_source, Source
+
+
+def check_if_transaction_is_acceptable(item_name: str, source: Source) -> bool:
+    """
+    Checks if a transaction is acceptable. Are currently skipped :
+        - transactions with a source of "Vendor"
+        - transactions with an item name of "?"
+
+    Arguments:
+        item_name {str} -- The name of the item.
+        source {Source} -- The source of the transaction.
+
+    Returns:
+        bool -- True if the transaction is acceptable, False otherwise.
+    """
+    # if sale is to a vendor, or if name == '?', ignore it
+    if source == Source.VENDOR or item_name == "?":
+        return False
+    return True
 
 
 def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
@@ -27,6 +46,10 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
         price, total = process_price(row["price"], stackSize)
         time = process_timestamp(row["time"])
         source = get_correct_source(row["source"])
+
+        # if transaction is not acceptable, ignore it
+        if not check_if_transaction_is_acceptable(itemName, source):
+            continue
 
         # if item not in database, add it
         add_new_item(itemId, itemName)
@@ -66,12 +89,9 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
         time = process_timestamp(row["time"])
         source = get_correct_source(row["source"])
 
-        # if sale is to a vendor, or if name == '?', ignore it
-        if source == "vendor" or itemName == "?":
+        # if transaction is not acceptable, ignore it
+        if not check_if_transaction_is_acceptable(itemName, source):
             continue
-
-        # if item not in database, add it
-        add_new_item(itemId, itemName)
 
         # create the sale
         sale = Sale(
@@ -83,6 +103,10 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
             time=time,
             source=source,
         )
+
+        # if item not in database, add it
+        add_new_item(itemId, itemName)
+
         result.append(sale)
     return result
 

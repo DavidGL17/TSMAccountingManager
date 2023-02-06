@@ -30,33 +30,6 @@ sales_list = [
         time=process_timestamp(1642334948),
         source=Source.AUCTION,
     ),
-    Sale(
-        item=158867,
-        stackSize=1,
-        quantity=7,
-        price=1.4392,
-        total=1.4392,
-        time=process_timestamp(1642074797),
-        source=Source.VENDOR,
-    ),
-    Sale(
-        item=176797,
-        stackSize=1,
-        quantity=1,
-        price=45.2496,
-        total=45.2496,
-        time=process_timestamp(1642156040),
-        source=Source.VENDOR,
-    ),
-    Sale(
-        item=176391,
-        stackSize=1,
-        quantity=7,
-        price=1.1949,
-        total=1.1949,
-        time=process_timestamp(1642074797),
-        source=Source.VENDOR,
-    ),
 ]
 expenses_list = [
     Purchase(
@@ -85,33 +58,6 @@ expenses_list = [
         total=7255.013400000001,
         time=process_timestamp(1641925078),
         source=Source.AUCTION,
-    ),
-    Purchase(
-        item=172056,
-        stackSize=200,
-        quantity=1000,
-        price=0.4,
-        total=80.0,
-        time=process_timestamp(1641925230),
-        source=Source.VENDOR,
-    ),
-    Purchase(
-        item=172057,
-        stackSize=200,
-        quantity=800,
-        price=0.3,
-        total=60.0,
-        time=process_timestamp(1641925223),
-        source=Source.VENDOR,
-    ),
-    Purchase(
-        item=4497,
-        stackSize=1,
-        quantity=3,
-        price=1.9,
-        total=1.9,
-        time=process_timestamp(1641414852),
-        source=Source.VENDOR,
     ),
 ]
 

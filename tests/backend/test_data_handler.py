@@ -1,5 +1,6 @@
 from tsmaccountingmanager.backend.database import zodb, check_item_exists
 from tsmaccountingmanager.backend.data_handler import process_expenses, process_sales, insert_purchases, insert_sales
+from tsmaccountingmanager.backend.models import Source
 from general_utils import (
     test_data_expenses_path,
     test_data_sales_path,
@@ -67,6 +68,17 @@ def test_full_insert():
     salesDF = pd.read_csv(full_data_sales_path)
     expenses = process_expenses(expensesDF)
     sales = process_sales(salesDF)
+
+    # make sure all the sales/expenses in the lists are acceptable
+    for expense in expenses:
+        assert expense.source != Source.VENDOR
+    for sale in sales:
+        assert sale.source != Source.VENDOR
+
+    # inspect all items in the database and make sure they are acceptable
+    for item in zodb.dbroot["app_data"]["items"].values():
+        assert item.name != "?"
+
     insert_purchases(expenses)
     insert_sales(sales)
     # check that all purchases are in the database
