@@ -4,6 +4,7 @@ from tsmaccountingmanager.backend.models import (
     extract_item_id,
     get_correct_source,
     Source,
+    Sale,
 )
 from datetime import datetime
 

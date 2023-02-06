@@ -39,10 +39,24 @@ class Purchase(Persistent):
     total: float
     time: datetime
     source: Source
-    id: str = field(init=False)
+    id: int = field(init=False)
 
     def __post_init__(self):
-        self.id = str(self.item) + ":" + str(self.time.timestamp())
+        self.id = uuid.uuid4().int
+
+    def __eq__(self, other):
+        """
+        Compares every attribute except for the id.
+        """
+        return (
+            self.item == other.item
+            and self.quantity == other.quantity
+            and self.stackSize == other.stackSize
+            and self.price == other.price
+            and self.total == other.total
+            and self.time == other.time
+            and self.source == other.source
+        )
 
 
 @dataclass
@@ -58,8 +72,7 @@ class Sale(Persistent):
         item: reference to the item (as an id)
         time: the time the purchase was made
         source: the source of the purchase
-        id: the id of the sale. This is the timestamp of the sale combined with the item id :
-        {item_id}:{timestamp}
+        id: the id of the sale. This is generated randomly by uuid4.
     """
 
     stackSize: int
@@ -69,10 +82,24 @@ class Sale(Persistent):
     item: int
     time: datetime
     source: Source
-    id: str = field(init=False)
+    id: int = field(init=False)
 
     def __post_init__(self):
-        self.id = str(self.item) + ":" + str(self.time.timestamp())
+        self.id = uuid.uuid4().int
+
+    def __eq__(self, other):
+        """
+        Compares every attribute except for the id.
+        """
+        return (
+            self.item == other.item
+            and self.quantity == other.quantity
+            and self.stackSize == other.stackSize
+            and self.price == other.price
+            and self.total == other.total
+            and self.time == other.time
+            and self.source == other.source
+        )
 
 
 @dataclass

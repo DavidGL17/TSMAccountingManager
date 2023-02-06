@@ -1,0 +1,576 @@
+itemString,itemName,stackSize,quantity,price,otherPlayer,player,time,source
+i:175924,Contract: The Undying Army,1,1,71250000,Zerdryx,Hovra,1642346783,Auction
+i:173134,Deadly Sinvyr Ring,1,1,6792975,Harimis,Hovra,1642280642,Auction
+i:187446,?,3,27,18997,Merchant,Ieri,1642167682,Vendor
+i:176809,Cracked Actuator,1,9,4534,Merchant,Ieri,1642167682,Vendor
+i:178134,Ephemeral Digits,2,14,15085,Merchant,Ieri,1642167682,Vendor
+i:178133,Tendrils of Ectoplasm,23,138,4290,Merchant,Ieri,1642167682,Vendor
+i:178136,Emotional Residue,6,36,3449,Merchant,Ieri,1642167682,Vendor
+i:187356,?,4,24,12062,Merchant,Ieri,1642167682,Vendor
+i:178178,Brittle Bark,1,5,3884,Merchant,Ieri,1642167682,Vendor
+i:187492,?,1,5,73779,Merchant,Ieri,1642167682,Vendor
+i:185476,Flowing Ridge Spikes,5,20,12945,Merchant,Ieri,1642167682,Vendor
+i:176862,Marred Skin,10,40,3525,Merchant,Ieri,1642167682,Vendor
+i:187491,?,1,3,69128,Merchant,Ieri,1642167682,Vendor
+i:184392,Fizzled Ritual Scroll,1,3,24235,Merchant,Ieri,1642167682,Vendor
+i:185479,Sinuous Wing Membrane,2,6,3525,Merchant,Ieri,1642167682,Vendor
+i:178714::3:1524:6646:6652,?,1,1,1447760,Merchant,Ieri,1642156043,Vendor
+i:185900::3:1479:6646:6652,?,1,1,1452372,Merchant,Ieri,1642156042,Vendor
+i:179562::4:1472:5884:6646:6652,?,1,1,749501,Merchant,Ieri,1642156041,Vendor
+i:176797::3:1683:6652:6908:1:9:60,Ritual Bell of the Peerless,1,1,452496,Merchant,Ieri,1642156040,Vendor
+i:178705::3:1501:6646:6652,?,1,1,419396,Merchant,Ieri,1642156035,Vendor
+i:181679::4:1472:5894:6646:6652,?,1,1,426745,Merchant,Ieri,1642156035,Vendor
+i:178782::4:41:1524:6646:7575,?,1,1,431442,Merchant,Ieri,1642156034,Vendor
+i:181668::4:1472:5900:6646:6652,?,1,1,879758,Merchant,Ieri,1642156034,Vendor
+i:178696::3:1498:6646:6652,?,1,1,648641,Merchant,Ieri,1642156033,Vendor
+i:173874,Twisted Sediment,8,24,12932,Merchant,Ieri,1642155536,Vendor
+i:178135,Wisp of Life,3,9,180544,Merchant,Ieri,1642155536,Vendor
+i:184390,Foul Ectoplasm,2,4,20359,Merchant,Ieri,1642155536,Vendor
+i:178133,Tendrils of Ectoplasm,80,160,4290,Merchant,Ieri,1642155536,Vendor
+i:178134,Ephemeral Digits,4,4,15085,Merchant,Ieri,1642155536,Vendor
+i:187485,?,1,8,88546,Merchant,Ieri,1642153351,Vendor
+i:180309,Malicious Mandible,1,8,146572,Merchant,Ieri,1642153351,Vendor
+i:176872,Dense Stalk,1,8,14567,Merchant,Ieri,1642153351,Vendor
+i:176871,Fortified Antennae,1,6,12055,Merchant,Ieri,1642153351,Vendor
+i:173871,Harrowed Ichor,2,10,3597,Merchant,Ieri,1642153351,Vendor
+i:185479,Sinuous Wing Membrane,1,5,3525,Merchant,Ieri,1642153351,Vendor
+i:178178,Brittle Bark,7,35,3884,Merchant,Ieri,1642153351,Vendor
+i:187357,?,5,25,12779,Merchant,Ieri,1642153351,Vendor
+i:185481,Long Fibrous Tongue,1,5,3525,Merchant,Ieri,1642153351,Vendor
+i:185476,Flowing Ridge Spikes,11,44,12945,Merchant,Ieri,1642153351,Vendor
+i:176862,Marred Skin,15,45,3525,Merchant,Ieri,1642153351,Vendor
+i:187443,?,1,3,74354,Merchant,Ieri,1642153351,Vendor
+i:181491,?,3,9,3271800,Merchant,Ieri,1642153351,Vendor
+i:181484,?,4,12,2196106,Merchant,Ieri,1642153351,Vendor
+i:184402,?,2,4,2420512,Merchant,Ieri,1642153351,Vendor
+i:176866,Putrid Sludge,4,12,3943,Merchant,Ieri,1642151288,Vendor
+i:176867,Fractured Shackle,2,6,3688,Merchant,Ieri,1642151288,Vendor
+i:176874,Desiccated Humerus,2,6,11882,Merchant,Ieri,1642150694,Vendor
+i:176939::1:6909:1:9:60,?,1,3,150511,Merchant,Ieri,1642150694,Vendor
+i:176866,Putrid Sludge,2,6,3943,Merchant,Ieri,1642150694,Vendor
+i:176807,Dented Armorplate,1,4,13450,Merchant,Ieri,1642150229,Vendor
+i:173360,Glossy Fur,1,4,4159,Merchant,Ieri,1642150229,Vendor
+i:173362,Lustrous Scale,4,16,3816,Merchant,Ieri,1642150229,Vendor
+i:176809,Cracked Actuator,2,4,4534,Merchant,Ieri,1642150229,Vendor
+i:176087,Gorm Chitin,2,4,3728,Merchant,Ieri,1642150229,Vendor
+i:176089,Treesnap Mandible,1,2,13065,Merchant,Ieri,1642150229,Vendor
+i:175550::2:1711:6907:1:9:60,Eventide Sabatons of the Harmonious,1,1,388955,Merchant,Ieri,1642074816,Vendor
+i:175543::2:1683:6907:1:9:60,Blackthorn Helm of the Peerless,1,1,369172,Merchant,Ieri,1642074815,Vendor
+i:155635,Sinewy Wing,1,9,3314,Merchant,Ieri,1642074797,Vendor
+i:176392,Patterned Wing,1,7,4466,Merchant,Ieri,1642074797,Vendor
+i:158867,Needlepoint Bill,1,7,14392,Merchant,Ieri,1642074797,Vendor
+i:173877,Burnished Hoof,1,7,13371,Merchant,Ieri,1642074797,Vendor
+i:176391,Leafy Antenna,1,7,11949,Merchant,Ieri,1642074797,Vendor
+i:178133,Tendrils of Ectoplasm,1,7,4290,Merchant,Ieri,1642074797,Vendor
+i:176807,Dented Armorplate,1,5,13450,Merchant,Ieri,1642074797,Vendor
+i:176866,Putrid Sludge,1,5,3943,Merchant,Ieri,1642074797,Vendor
+i:176874,Desiccated Humerus,1,5,11882,Merchant,Ieri,1642074797,Vendor
+i:176853,Spindly Flesh,1,5,3780,Merchant,Ieri,1642074797,Vendor
+i:181492,?,9,45,787100,Merchant,Ieri,1642074797,Vendor
+i:181489,?,11,55,461224,Merchant,Ieri,1642074797,Vendor
+i:181484,?,2,6,2196106,Merchant,Ieri,1642074797,Vendor
+i:181488,?,14,42,888891,Merchant,Ieri,1642074797,Vendor
+i:181485,?,4,12,1219328,Merchant,Ieri,1642074797,Vendor
+i:176809,Cracked Actuator,2,6,4534,Merchant,Ieri,1642074797,Vendor
+i:173874,Twisted Sediment,2,6,12932,Merchant,Ieri,1642074797,Vendor
+i:176869,Bone Chip,4,4,4410,Merchant,Ieri,1642074797,Vendor
+i:38303,Enduring Mojo,10,10,5000,Merchant,Enle,1642070428,Vendor
+i:38303,Enduring Mojo,3,3,5000,Merchant,Enle,1642070427,Vendor
+i:5465,Small Spider Leg,1,1,3,Merchant,Enle,1642070425,Vendor
+i:22644,Crunchy Spider Leg,2,2,12,Merchant,Enle,1642070425,Vendor
+i:43013,Chilled Meat,1,1,150,Merchant,Enle,1642070424,Vendor
+i:1210,Shadowgem,1,1,250,Merchant,Enle,1642070424,Vendor
+i:2835,Rough Stone,6,6,2,Merchant,Enle,1642070422,Vendor
+i:2838,Heavy Stone,2,2,60,Merchant,Enle,1642070421,Vendor
+i:2836,Coarse Stone,11,11,15,Merchant,Enle,1642070420,Vendor
+i:2455,Minor Mana Potion,1,1,10,Merchant,Enle,1642070418,Vendor
+i:1179,Ice Cold Milk,3,3,6,Merchant,Enle,1642070416,Vendor
+i:2287,Haunch of Meat,3,3,6,Merchant,Enle,1642070415,Vendor
+i:4348,Pattern: Phoenix Gloves,1,1,175,Merchant,Enle,1642070415,Vendor
+i:60914::2:3631:6697:1:9:23,?,1,1,15537,Merchant,Enle,1642070411,Vendor
+i:9811::2:1690:6654:1:9:22,?,1,1,2148,Merchant,Enle,1642070411,Vendor
+i:6382::1:6654:1:9:22,?,1,1,2100,Merchant,Enle,1642070410,Vendor
+i:60895::1:3631:1:9:13,?,1,1,1123,Merchant,Enle,1642070410,Vendor
+i:157731,?,1,1,5,Merchant,Enle,1642070410,Vendor
+i:60931::1:3631:1:9:23,?,1,1,3270,Merchant,Enle,1642070409,Vendor
+i:60902::1:3631:1:9:21,?,1,1,2280,Merchant,Enle,1642070408,Vendor
+i:157737,?,1,1,5,Merchant,Enle,1642070408,Vendor
+i:60925::2:3631:6700:1:9:22,?,1,1,5117,Merchant,Enle,1642070407,Vendor
+i:60908::1:3631:1:9:21,?,1,1,4640,Merchant,Enle,1642070407,Vendor
+i:27768::1:6710:1:9:13,?,1,1,1165,Merchant,Enle,1642070406,Vendor
+i:60941::1:3631:1:9:21,?,1,1,3381,Merchant,Enle,1642070406,Vendor
+i:37715::1:6710:1:9:19,?,1,1,3683,Merchant,Enle,1642070405,Vendor
+i:1801::1:6656:1:9:22,?,1,4,1171,Merchant,Enle,1642070402,Vendor
+i:55982,Inert Elemental Granule,3,12,70,Merchant,Enle,1642070402,Vendor
+i:55974,Inert Elemental Particle,2,8,21,Merchant,Enle,1642070402,Vendor
+i:3379::1:6656:1:9:22,?,1,2,775,Merchant,Enle,1642070402,Vendor
+i:2782::1:6657:1:9:22,?,1,2,3126,Merchant,Enle,1642070402,Vendor
+i:3931,Poisoned Spider Fang,1,2,185,Merchant,Enle,1642070402,Vendor
+i:7100,Sticky Ichor,2,4,7,Merchant,Enle,1642070402,Vendor
+i:173053,Contract: The Wild Hunt,1,1,47268200,Droodballe,Hovra,1642069201,Auction
+i:172233,Drums of Deathly Ferocity,53,53,3752500,Nyahk,Hovra,1642069201,Auction
+i:4324,Azure Silk Vest,1,1,2112705,Accazia,Asharilari,1642032721,Auction
+i:172051,Steak a la Mode,281,281,90250,Multiple Buyers,Asharilari,1641977253,Auction
+i:172041,Spinefin Souffle and Fries,11,11,662055,Sufa,Asharilari,1641977252,Auction
+i:172049,Iridescent Ravioli with Apple Sauce,50,50,313405,Multiple Buyers,Asharilari,1641977252,Auction
+i:172045,Tenebrous Crown Roast Aspic,80,80,474905,Zehïr,Asharilari,1641977252,Auction
+i:54474,Deathsilk Shoulders,1,1,16315585,Arkenrok,Asharilari,1641925413,Auction
+i:178927,Shadowghast Necklace,1,1,149158645,Lulusciene,Asharilari,1641845695,Auction
+i:1775::1:6656:1:9:20,?,1,4,603,Merchant,Enle,1641726626,Vendor
+i:33546,Vicious Fang,4,16,1562,Merchant,Enle,1641726626,Vendor
+i:44783,?,1,4,1735,Merchant,Enle,1641726626,Vendor
+i:44782,Bent Raptor Talon,1,1,1562,Merchant,Enle,1641726626,Vendor
+i:117,Tough Jerky,2,2,1,Merchant,Enle,1641725876,Vendor
+i:4709::1:6654:1:9:17,?,1,2,1983,Merchant,Enle,1641725875,Vendor
+i:157733,?,1,1,5,Merchant,Enle,1641725874,Vendor
+i:51968::2:1690:4244:1:9:15,?,1,1,1416,Merchant,Enle,1641725874,Vendor
+i:9773::2:1690:6654:1:9:16,?,1,1,2785,Merchant,Enle,1641725873,Vendor
+i:60899::2:3631:6697:1:9:16,?,1,1,3363,Merchant,Enle,1641725873,Vendor
+i:36009::2:1676:6654:1:9:19,?,1,1,2553,Merchant,Enle,1641725872,Vendor
+i:36327::2:1690:6654:1:9:19,?,1,1,2544,Merchant,Enle,1641725872,Vendor
+i:118,Minor Healing Potion,1,1,5,Merchant,Enle,1641725871,Vendor
+i:2455,Minor Mana Potion,1,1,10,Merchant,Enle,1641725871,Vendor
+i:13444,Major Mana Potion,1,1,1500,Merchant,Enle,1641725871,Vendor
+i:33427::1:6657:1:9:19,?,1,5,2318,Merchant,Enle,1641725869,Vendor
+i:33629,Frosty Spinneret,6,30,1562,Merchant,Enle,1641725869,Vendor
+i:43852,Thick Fur Clothing Scraps,2,6,5000,Merchant,Enle,1641725869,Vendor
+i:33569,Barbed Fang,1,3,1562,Merchant,Enle,1641725869,Vendor
+i:25353::1:6656:1:9:17,?,1,3,516,Merchant,Enle,1641725869,Vendor
+i:25368::1:6656:1:9:17,?,1,3,507,Merchant,Enle,1641725869,Vendor
+i:25340::1:6656:1:9:17,?,1,1,953,Merchant,Enle,1641725869,Vendor
+i:6582::2:1676:6654:1:9:15,?,1,1,992,Merchant,Enle,1641723865,Vendor
+i:2251,Gooey Spider Leg,1,1,12,Merchant,Enle,1641723863,Vendor
+i:2835,Rough Stone,6,6,2,Merchant,Enle,1641723862,Vendor
+i:2836,Coarse Stone,1,1,15,Merchant,Enle,1641723861,Vendor
+i:1820::1:6657:1:9:15,?,1,3,831,Merchant,Enle,1641723859,Vendor
+i:7101,Bug Eye,1,1,5,Merchant,Enle,1641723859,Vendor
+i:1015,Lean Wolf Flank,2,2,24,Merchant,Enle,1641723450,Vendor
+i:6400::1:6655:1:9:13,?,1,1,1421,Merchant,Enle,1641723449,Vendor
+i:88281::1:6710:1:9:15,?,1,1,1723,Merchant,Enle,1641723447,Vendor
+i:9822::2:1690:6654:1:9:14,?,1,1,933,Merchant,Enle,1641723446,Vendor
+i:157736,?,1,1,5,Merchant,Enle,1641723446,Vendor
+i:1806::1:6656:1:9:14,?,1,4,322,Merchant,Enle,1641723444,Vendor
+i:3299,Fractured Canine,1,4,48,Merchant,Enle,1641723444,Vendor
+i:3301,Sharp Canine,1,1,102,Merchant,Enle,1641723444,Vendor
+i:6795,White Swashbuckler's Shirt,1,1,8261200,Yøky-Cho'gall,Asharilari,1641433066,Auction
+i:10055,Pink Mageweave Shirt,1,1,3517090,Yøky-Cho'gall,Asharilari,1641433038,Auction
+i:3666,Gooey Spider Cake,3,3,100,Merchant,Enle,1641414944,Vendor
+i:1017,Seasoned Wolf Kabob,4,4,100,Merchant,Enle,1641414943,Vendor
+i:3683,Recipe: Gooey Spider Cake,1,1,400,Merchant,Enle,1641414943,Vendor
+i:2701,Recipe: Seasoned Wolf Kabob,1,1,400,Merchant,Enle,1641414942,Vendor
+i:156973::1:3631:1:9:13,?,1,1,3291,Merchant,Enle,1641414941,Vendor
+i:1127,?,5,5,25,Merchant,Enle,1641414861,Vendor
+i:5465,Small Spider Leg,2,2,3,Merchant,Enle,1641414860,Vendor
+i:22644,Crunchy Spider Leg,2,2,12,Merchant,Enle,1641414859,Vendor
+i:1015,Lean Wolf Flank,6,6,24,Merchant,Enle,1641414859,Vendor
+i:2251,Gooey Spider Leg,8,8,12,Merchant,Enle,1641414859,Vendor
+i:1288,Large Venom Sac,2,2,185,Merchant,Enle,1641414857,Vendor
+i:1776::1:6656:1:9:13,?,1,3,404,Merchant,Enle,1641414850,Vendor
+i:1476,Snapped Spider Limb,3,9,6,Merchant,Enle,1641414850,Vendor
+i:3300,Rabbit's Foot,3,9,9,Merchant,Enle,1641414850,Vendor
+i:62530,Spider Hair,3,9,2,Merchant,Enle,1641414850,Vendor
+i:62328,Shed Fur,5,5,1,Merchant,Enle,1641414850,Vendor
+i:27766::1:6710:1:9:11,?,1,1,792,Merchant,Enle,1641414572,Vendor
+i:1288,Large Venom Sac,1,1,185,Merchant,Enle,1641414558,Vendor
+i:27859,Zangar Caps,1,1,280,Merchant,Enle,1641414557,Vendor
+i:51968::2:1690:4244:1:9:13,?,1,1,1138,Merchant,Enle,1641414557,Vendor
+i:5465,Small Spider Leg,1,1,3,Merchant,Enle,1641414556,Vendor
+i:2836,Coarse Stone,1,1,15,Merchant,Enle,1641414554,Vendor
+i:157652,?,1,1,5,Merchant,Enle,1641414553,Vendor
+i:24840::2:1704:6654:1:9:11,?,1,1,1296,Merchant,Enle,1641414552,Vendor
+i:157734,?,1,1,5,Merchant,Enle,1641414552,Vendor
+i:27676,Strange Spores,1,6,200,Merchant,Enle,1641414550,Vendor
+i:56196,Broken Mandible,6,36,10,Merchant,Enle,1641414550,Vendor
+i:17057,Shiny Fish Scales,1,6,7,Merchant,Enle,1641414550,Vendor
+i:17058,Fish Oil,1,6,7,Merchant,Enle,1641414550,Vendor
+i:25456,Glowing Spores,2,8,870,Merchant,Enle,1641414550,Vendor
+i:25372::1:6656:1:9:10,?,1,4,40,Merchant,Enle,1641414550,Vendor
+i:25451,Swamp Moss,6,24,1185,Merchant,Enle,1641414550,Vendor
+i:3300,Rabbit's Foot,1,4,9,Merchant,Enle,1641414550,Vendor
+i:62328,Shed Fur,3,12,1,Merchant,Enle,1641414550,Vendor
+i:1476,Snapped Spider Limb,1,2,6,Merchant,Enle,1641414550,Vendor
+i:62530,Spider Hair,4,8,2,Merchant,Enle,1641414550,Vendor
+i:172233,Drums of Deathly Ferocity,10,10,1710000,Ezavoid,Hovra,1641412769,Auction
+i:55553::2:1697:4763:1:9:32,?,1,1,3292415,Aergad,Asharilari,1641375716,Auction
+i:7046,Azure Silk Pants,1,1,3043515,Antraxar,Asharilari,1641324164,Auction
+i:7048,Azure Silk Hood,1,1,2145100,Antraxar,Asharilari,1641309105,Auction
+i:10001,Black Mageweave Robe,1,1,891670,Antraxar,Asharilari,1641308924,Auction
+i:2587,Gray Woolen Shirt,1,1,1462620,Abyww,Asharilari,1641156315,Auction
+i:4343,Brown Linen Pants,1,1,808355,Antraxar,Asharilari,1641085312,Auction
+i:41251,Yellow Lumberjack Shirt,1,1,9166075,Thrøryn,Asharilari,1641052139,Auction
+p:2583,Azure Windseeker,1,1,62023695,Khonvoum,Asharilari,1641051766,Auction
+i:2577,Blue Linen Shirt,1,1,7227030,Tokz-MarécagedeZangar,Asharilari,1641045223,Auction
+i:10054,Lavender Mageweave Shirt,1,1,3379340,Videlm,Asharilari,1641042982,Auction
+p:2922,Devouring Animite,1,1,380000,Dkaell-Eldre'Thalas,Asharilari,1641032691,Auction
+i:171352,Potion of Empowered Exorcisms,3,3,3485550,Sedit,Hovra,1641293803,Auction
+i:181468,Veiled Augment Rune,11,11,977550,Sokka,Hovra,1641293803,Auction
+i:173163,Missive of Versatility,8,8,6650475,Multiple Buyers,Hovra,1641293803,Auction
+i:179339::3:1524:6646:6652,?,1,1,1447152,Merchant,Hovra,1641293768,Vendor
+i:109125,Fireweed,500,500,28025,Lebombé,Asharilari,1642346545,Auction
+i:34055,Greater Cosmic Essence,1,1,109250,Morgrius,Asharilari,1642346545,Auction
+i:9999,Black Mageweave Leggings,1,1,5704940,Zeahan,Asharilari,1642334948,Auction
+i:4307,Heavy Linen Gloves,1,1,475190,Karädoc-Cho'gall,Asharilari,1642278531,Auction
+i:2575,Red Linen Shirt,1,1,1720260,Vhmiddle,Asharilari,1642274008,Auction
+i:6263,Blue Overalls,1,1,7121770,Luxurre-MarécagedeZangar,Asharilari,1642244510,Auction
+i:114821,Hexweave Bag,1,3,3134905,Bouftatronch-Eldre'Thalas,Asharilari,1642243107,Auction
+i:172051,Steak a la Mode,109,109,90060,Multiple Buyers,Asharilari,1642241103,Auction
+i:114821,Hexweave Bag,1,2,3134905,Léonscarlet,Asharilari,1642202372,Auction
+i:6795,White Swashbuckler's Shirt,1,1,8075760,Cecirae-Cho'gall,Asharilari,1642196875,Auction
+i:41254,Rustic Workman's Shirt,1,1,19678395,Tumito,Asharilari,1642195487,Auction
+i:41251,Yellow Lumberjack Shirt,1,1,10752100,Tumito,Asharilari,1642195474,Auction
+i:41255,Green Workman's Shirt,1,1,4565985,Tumito,Asharilari,1642195242,Auction
+i:4344,Brown Linen Shirt,1,1,475095,Tumijao,Asharilari,1642194379,Auction
+i:41603,Azure Spellthread,1,1,30209050,Spinela,Asharilari,1642191703,Auction
+i:171275,Potion of Spectral Strength,85,85,1377500,Vaniibank,Hovra,1642196556,Auction
+i:44403::1:6710:1:9:12,?,1,1,933,Merchant,Mertha,1642195928,Vendor
+i:43011,Worg Haunch,1,1,200,Merchant,Mertha,1642195927,Vendor
+i:113585,Iron Horde Rejuvenation Potion,6,6,250,Merchant,Mertha,1642195923,Vendor
+i:35953,Mead Basted Caribou,2,2,800,Merchant,Mertha,1642195921,Vendor
+i:112393::1:6691:1:9:12,?,1,1,3813,Merchant,Mertha,1642195920,Vendor
+i:111537::1:3631:1:9:16,?,1,1,4212,Merchant,Mertha,1642195920,Vendor
+i:39680::1:6710:1:9:12,?,1,1,1078,Merchant,Mertha,1642195919,Vendor
+i:157702,?,1,1,5,Merchant,Mertha,1642195919,Vendor
+i:112443::1:6691:1:9:13,?,1,1,2319,Merchant,Mertha,1642195918,Vendor
+i:112669::1:6691:1:9:14,?,1,1,1986,Merchant,Mertha,1642195918,Vendor
+i:112663::1:6691:1:9:14,?,1,1,1994,Merchant,Mertha,1642195917,Vendor
+i:107603,Eroded Tusk,9,27,2283,Merchant,Mertha,1642195915,Vendor
+i:112684,Damaged Weaponry,7,14,3453,Merchant,Mertha,1642195915,Vendor
+i:112463,Battered Armor Fragments,11,22,1074,Merchant,Mertha,1642195915,Vendor
+i:113530,Scaly Skin,1,5,2388,Merchant,Mertha,1642194025,Vendor
+i:112463,Battered Armor Fragments,3,12,1074,Merchant,Mertha,1642194025,Vendor
+i:112684,Damaged Weaponry,1,4,3453,Merchant,Mertha,1642194025,Vendor
+i:33546,Vicious Fang,2,6,1562,Merchant,Mertha,1642194025,Vendor
+i:43851,Fur Clothing Scraps,1,3,1000,Merchant,Mertha,1642194025,Vendor
+i:33632,Icicle Fang,1,3,2475,Merchant,Mertha,1642194025,Vendor
+i:157631,?,1,1,5,Merchant,Mertha,1642192375,Vendor
+i:157698,?,1,1,5,Merchant,Mertha,1642192374,Vendor
+i:165001,?,1,1,10,Merchant,Mertha,1642192373,Vendor
+i:113840,?,1,1,42517,Merchant,Thesemiramis,1642191394,Vendor
+i:113958,?,1,1,53676,Merchant,Thesemiramis,1642191393,Vendor
+i:172041,Spinefin Souffle and Fries,20,20,522500,Kàràdoc,Asharilari,1642191097,Auction
+i:172045,Tenebrous Crown Roast Aspic,16,16,310935,Surugh,Asharilari,1642191096,Auction
+i:172051,Steak a la Mode,93,93,90060,Multiple Buyers,Asharilari,1642191096,Auction
+i:2576,White Linen Shirt,1,1,1415595,Valof,Asharilari,1642178300,Auction
+i:185968,Duplicate Rune Chit,1,4,2750,Merchant,Feyleen,1642190685,Vendor
+i:187487,?,1,4,103369,Merchant,Feyleen,1642190685,Vendor
+i:187464,?,4,16,15537,Merchant,Feyleen,1642190685,Vendor
+i:187488,?,1,3,82151,Merchant,Feyleen,1642190685,Vendor
+i:187489,?,1,3,83678,Merchant,Feyleen,1642190685,Vendor
+i:176852,Hardened Tail Bone,2,4,12945,Merchant,Feyleen,1642190685,Vendor
+i:173874,Twisted Sediment,3,6,12932,Merchant,Feyleen,1642190685,Vendor
+i:185479,Sinuous Wing Membrane,2,2,3525,Merchant,Feyleen,1642190685,Vendor
+i:178178,Brittle Bark,5,5,3884,Merchant,Feyleen,1642190685,Vendor
+i:173874,Twisted Sediment,1,6,12932,Merchant,Feyleen,1642188958,Vendor
+i:178178,Brittle Bark,2,12,3884,Merchant,Feyleen,1642188958,Vendor
+i:180309,Malicious Mandible,1,4,146572,Merchant,Feyleen,1642188958,Vendor
+i:185480,Vibrantly Colored Crest,3,12,12945,Merchant,Feyleen,1642188958,Vendor
+i:176862,Marred Skin,13,52,3525,Merchant,Feyleen,1642188958,Vendor
+i:185476,Flowing Ridge Spikes,8,32,12945,Merchant,Feyleen,1642188958,Vendor
+i:185481,Long Fibrous Tongue,2,4,3525,Merchant,Feyleen,1642188958,Vendor
+i:187482,?,1,2,81996,Merchant,Feyleen,1642188958,Vendor
+i:180732,Rune Etched Vial,80,80,95095,Grigz-Cho'gall,Hovra,1642187512,Auction
+i:173163,Missive of Versatility,10,10,4607500,Multiple Buyers,Hovra,1642187512,Auction
+i:173147,Deadly Sinvyr Necklace,1,1,2192980,Grogenn,Hovra,1642173351,Auction
+i:178824::4:1498:6646:6652:6935,?,1,1,534913,Merchant,Ieri,1642167751,Vendor
+i:175713::3:1472:5891:6646,?,1,1,524229,Merchant,Ieri,1642167750,Vendor
+i:183037::4:1472:6646:6652:7189,?,1,1,552344,Merchant,Ieri,1642167750,Vendor
+i:176853,Spindly Flesh,1,9,3780,Merchant,Ieri,1642167682,Vendor
+i:187455,?,1,9,89128,Merchant,Ieri,1642167682,Vendor
+i:132233,Lingering Essence,1,3,2187,Merchant,Mertha,1642348491,Vendor
+i:132237,Large Leg Bone,1,3,1874,Merchant,Mertha,1642348491,Vendor
+i:132239,Bone Splinters,1,3,26515,Merchant,Mertha,1642348491,Vendor
+i:132204,Sticky Volatile Substance,12,36,2097,Merchant,Mertha,1642348491,Vendor
+i:132231,Worn Hooked Claw,8,24,2198,Merchant,Mertha,1642348491,Vendor
+i:132199,Congealed Felblood,6,30,29457,Merchant,Mertha,1642348491,Vendor
+i:136571,Demonic Figure,1,5,4291,Merchant,Mertha,1642348491,Vendor
+i:172049,Iridescent Ravioli with Apple Sauce,187,187,228000,Multiple Buyers,Asharilari,1642352659,Auction
+i:172041,Spinefin Souffle and Fries,90,90,427500,Multiple Buyers,Asharilari,1642352660,Auction
+i:172049,Iridescent Ravioli with Apple Sauce,5,5,228000,Biscottè,Hovra,1642352601,Auction
+i:4784,Lifeless Stone,20,60,360,Merchant,Hovra,1642354063,Vendor
+i:4787,Burning Pitch,18,54,577,Merchant,Hovra,1642354063,Vendor
+i:3946::1:6656:1:9:30,?,1,3,2292,Merchant,Hovra,1642354063,Vendor
+i:8146,Wicked Claw,1,5,500,Merchant,Hovra,1642354063,Vendor
+i:8754,Twill Cover,1,5,1926,Merchant,Hovra,1642354063,Vendor
+i:13822::1:6657:1:9:30,?,1,5,6421,Merchant,Hovra,1642354063,Vendor
+i:4784,Lifeless Stone,4,28,360,Merchant,Hovra,1642354063,Vendor
+i:8082::1:6656:1:9:30,?,1,7,3351,Merchant,Hovra,1642354063,Vendor
+i:18878,?,1,1,16725,Merchant,Hovra,1642354066,Vendor
+i:13003::1:6659:1:9:30,?,1,1,28830,Merchant,Hovra,1642354066,Vendor
+i:18822,?,1,1,21216,Merchant,Hovra,1642354067,Vendor
+i:17077,?,1,1,21437,Merchant,Hovra,1642354068,Vendor
+i:17066,?,1,1,10386,Merchant,Hovra,1642354068,Vendor
+i:8952,Roasted Quail,1,1,200,Merchant,Hovra,1642354070,Vendor
+i:16840,Earthfury Bracers,1,1,5712,Merchant,Hovra,1642354071,Vendor
+i:16946,?,1,1,12231,Merchant,Hovra,1642354071,Vendor
+i:18829,?,1,2,8345,Merchant,Hovra,1642354071,Vendor
+i:18870,?,1,1,8607,Merchant,Hovra,1642354072,Vendor
+i:18817,?,1,1,8604,Merchant,Hovra,1642354072,Vendor
+i:16834,?,1,1,9187,Merchant,Hovra,1642354073,Vendor
+i:16835,?,1,1,11145,Merchant,Hovra,1642354073,Vendor
+i:19146,?,1,1,6152,Merchant,Hovra,1642354073,Vendor
+i:17065,?,1,1,33381,Merchant,Hovra,1642354074,Vendor
+i:19138,?,1,1,79853,Merchant,Hovra,1642354075,Vendor
+i:19147,?,1,2,91453,Merchant,Hovra,1642354076,Vendor
+i:17082,?,1,1,46146,Merchant,Hovra,1642354076,Vendor
+i:19140,?,1,1,60256,Merchant,Hovra,1642354077,Vendor
+i:16813,?,1,1,9156,Merchant,Hovra,1642354078,Vendor
+i:16817,Girdle of Prophecy,1,1,5648,Merchant,Hovra,1642354078,Vendor
+i:18809,?,1,1,5606,Merchant,Hovra,1642354079,Vendor
+i:16915,?,1,1,11449,Merchant,Hovra,1642354079,Vendor
+i:16819,Vambraces of Prophecy,1,1,5691,Merchant,Hovra,1642354080,Vendor
+i:16801,?,1,1,5735,Merchant,Hovra,1642354080,Vendor
+i:16865,?,1,1,11883,Merchant,Hovra,1642354081,Vendor
+i:13066::1:6658:1:9:30,?,1,1,11129,Merchant,Hovra,1642354085,Vendor
+i:18861,?,1,1,11972,Merchant,Hovra,1642354086,Vendor
+i:16859,?,1,1,8470,Merchant,Hovra,1642354087,Vendor
+i:19143,?,1,1,6087,Merchant,Hovra,1642354087,Vendor
+i:10386::2:1676:6654:1:9:30,?,1,1,5445,Merchant,Hovra,1642354088,Vendor
+i:7912,Solid Stone,12,12,100,Merchant,Hovra,1642354095,Vendor
+i:68198,Ruined Embersilk Scraps,16,32,1530,Merchant,Hovra,1642355334,Vendor
+i:68197,Scavenged Animal Parts,7,14,1744,Merchant,Hovra,1642355334,Vendor
+i:62072::1:6657:1:9:35,?,1,2,11477,Merchant,Hovra,1642355334,Vendor
+i:62106::1:6656:1:9:35,?,1,2,3283,Merchant,Hovra,1642355334,Vendor
+i:62113::1:6656:1:9:35,?,1,3,3371,Merchant,Hovra,1642355334,Vendor
+i:62110::1:6656:1:9:35,?,1,3,4963,Merchant,Hovra,1642355334,Vendor
+i:60576,Rending Fang,2,6,2073,Merchant,Hovra,1642355334,Vendor
+i:60577,Fire-Scorched Claw,1,4,4323,Merchant,Hovra,1642355334,Vendor
+i:62271,Battered Scale,12,48,2106,Merchant,Hovra,1642355334,Vendor
+i:62099::1:6656:1:9:35,?,1,6,6855,Merchant,Hovra,1642355334,Vendor
+i:62270,Grooved Fang,4,24,4131,Merchant,Hovra,1642355334,Vendor
+i:62125::1:6656:1:9:35,?,1,6,4869,Merchant,Hovra,1642355334,Vendor
+i:62268,Mangled Flipper,1,6,2121,Merchant,Hovra,1642355334,Vendor
+i:60396,Clubbed Tail,1,6,2073,Merchant,Hovra,1642355334,Vendor
+i:55746::2:1704:6654:1:9:35,?,1,1,13196,Merchant,Hovra,1642355339,Vendor
+i:69612::1:4236:1:9:35,?,1,1,33278,Merchant,Hovra,1642355340,Vendor
+i:55765::2:1697:6654:1:9:35,?,1,1,13148,Merchant,Hovra,1642355341,Vendor
+i:69611::1:4236:1:9:35,?,1,1,22270,Merchant,Hovra,1642355341,Vendor
+i:69601::1:4236:1:9:35,?,1,1,45976,Merchant,Hovra,1642355341,Vendor
+i:69796::1:4236:1:9:35,?,1,1,35558,Merchant,Hovra,1642355342,Vendor
+i:69606::1:4236:1:9:35,?,1,1,35044,Merchant,Hovra,1642355343,Vendor
+i:69605::1:4236:1:9:35,?,1,1,19990,Merchant,Hovra,1642355343,Vendor
+i:69602::1:4236:1:9:35,?,1,1,29003,Merchant,Hovra,1642355344,Vendor
+i:69640::1:4236:1:9:35,?,1,1,45793,Merchant,Hovra,1642355345,Vendor
+i:55585::2:1690:6654:1:9:35,?,1,1,12490,Merchant,Hovra,1642355346,Vendor
+i:55547::2:1711:6654:1:9:35,?,1,1,12250,Merchant,Hovra,1642355347,Vendor
+i:69641::1:4236:1:9:35,?,1,1,45963,Merchant,Hovra,1642355347,Vendor
+i:69619::1:4236:1:9:35,?,1,1,22947,Merchant,Hovra,1642355348,Vendor
+i:52078,Chaos Orb,1,1,2000,Merchant,Hovra,1642355357,Vendor
+i:17010,Fiery Core,4,4,2000,Merchant,Hovra,1642355359,Vendor
+i:17011,Lava Core,12,12,2000,Merchant,Hovra,1642355360,Vendor
+i:52182,Jasper,2,2,5000,Merchant,Hovra,1642355362,Vendor
+i:52180,Nightstone,2,2,5000,Merchant,Hovra,1642355363,Vendor
+i:17203,Sulfuron Ingot,1,1,1000,Merchant,Hovra,1642355367,Vendor
+i:7068,Elemental Fire,26,26,400,Merchant,Hovra,1642355376,Vendor
+i:7077,Heart of Fire,20,20,400,Merchant,Hovra,1642355377,Vendor
+i:186017,Korthite Crystal,19,19,312500,Merchant,Hovra,1642355378,Vendor
+i:7076,Essence of Earth,6,6,400,Merchant,Hovra,1642355381,Vendor
+i:7078,Essence of Fire,20,20,400,Merchant,Hovra,1642355381,Vendor
+i:52327,Volatile Earth,5,5,875,Merchant,Hovra,1642355385,Vendor
+i:7075,Core of Earth,8,8,400,Merchant,Hovra,1642355387,Vendor
+i:7067,Elemental Earth,5,5,400,Merchant,Hovra,1642355392,Vendor
+i:62784,Crocolisk Tail,4,4,287,Merchant,Hovra,1642355394,Vendor
+i:62778,Toughened Flesh,6,6,248,Merchant,Hovra,1642355394,Vendor
+i:53068,Lavascale Catfish,18,18,375,Merchant,Hovra,1642355395,Vendor
+i:8150,Deeprock Salt,14,14,250,Merchant,Hovra,1642355396,Vendor
+i:58257,Highland Spring Water,1,1,687,Merchant,Hovra,1642355403,Vendor
+i:58269,Massive Turkey Leg,1,1,1000,Merchant,Hovra,1642355404,Vendor
+i:58268,Roasted Beef,2,2,900,Merchant,Hovra,1642355404,Vendor
+i:69629::1:4236:1:9:35,?,1,1,40177,Merchant,Hovra,1642355464,Vendor
+i:69628::1:4236:1:9:35,?,1,1,77270,Merchant,Hovra,1642355465,Vendor
+i:69618::1:4236:1:9:35,?,1,1,64202,Merchant,Hovra,1642355465,Vendor
+i:172051,Steak a la Mode,15,15,89965,Twista,Asharilari,1642359406,Auction
+i:172041,Spinefin Souffle and Fries,377,377,427500,Khanh,Asharilari,1642359407,Auction
+i:172049,Iridescent Ravioli with Apple Sauce,25,25,228000,Azurei,Asharilari,1642359407,Auction
+p:2196,Lil' Tika,1,1,155800000,Fistule-Eldre'Thalas,Asharilari,1642371198,Auction
+i:9289,Field Plate Boots,1,1,21676435,Gudson,Asharilari,1642457746,Auction
+i:172045,Tenebrous Crown Roast Aspic,402,402,265525,Qdrood,Asharilari,1642519924,Auction
+i:109125,Fireweed,26,26,19000,Lebombé,Asharilari,1642519924,Auction
+i:172049,Iridescent Ravioli with Apple Sauce,223,223,228000,Lililiililil-Eldre'Thalas,Asharilari,1642519924,Auction
+i:140517,?,1,2,500000,Merchant,Mertha,1642534117,Vendor
+i:138783,?,1,2,100000,Merchant,Mertha,1642534117,Vendor
+i:132204,Sticky Volatile Substance,31,62,2097,Merchant,Mertha,1642534117,Vendor
+i:140310,?,1,2,100000,Merchant,Mertha,1642534117,Vendor
+i:132199,Congealed Felblood,6,24,29457,Merchant,Mertha,1642534117,Vendor
+i:132234,Spectral Dust,4,16,26713,Merchant,Mertha,1642534117,Vendor
+i:132233,Lingering Essence,8,32,2187,Merchant,Mertha,1642534117,Vendor
+i:132183,Razor Tooth,1,4,28628,Merchant,Mertha,1642534117,Vendor
+i:158808,Thick Tendon,1,4,12506,Merchant,Mertha,1642534117,Vendor
+i:25392::1:6656:1:9:25,?,1,5,2444,Merchant,Mertha,1642534117,Vendor
+i:25399::1:6657:1:9:25,?,1,5,3292,Merchant,Mertha,1642534117,Vendor
+i:25395::1:6656:1:9:25,?,1,9,2296,Merchant,Mertha,1642534117,Vendor
+i:4865,Ruined Pelt,1,9,5,Merchant,Mertha,1642534117,Vendor
+i:25358::1:6656:1:9:26,?,1,9,1576,Merchant,Mertha,1642534117,Vendor
+i:38218::1:6710:1:9:12,?,1,1,1383,Merchant,Mertha,1642534120,Vendor
+i:160606::2:1704:4244:1:9:25,?,1,1,20599,Merchant,Mertha,1642534120,Vendor
+i:160606::2:1676:4244:1:9:21,?,1,1,20599,Merchant,Mertha,1642534121,Vendor
+i:121188::2:1704:6654:1:9:21,?,1,1,3082,Merchant,Mertha,1642534121,Vendor
+i:157704,?,1,1,5,Merchant,Mertha,1642534121,Vendor
+i:157700,?,1,1,5,Merchant,Mertha,1642534122,Vendor
+i:159521::3:42:1711:6655:1:9:24,?,1,1,10154,Merchant,Mertha,1642534123,Vendor
+i:132231,Worn Hooked Claw,3,6,2198,Merchant,Mertha,1642536032,Vendor
+i:132199,Congealed Felblood,2,4,29457,Merchant,Mertha,1642536032,Vendor
+i:132204,Sticky Volatile Substance,4,16,2097,Merchant,Mertha,1642536032,Vendor
+i:24368,Coilfang Armaments,2,8,500,Merchant,Mertha,1642536032,Vendor
+i:17057,Shiny Fish Scales,2,8,7,Merchant,Mertha,1642536032,Vendor
+i:17058,Fish Oil,5,20,7,Merchant,Mertha,1642536032,Vendor
+i:25405::1:6657:1:9:27,?,1,4,5832,Merchant,Mertha,1642536032,Vendor
+i:24507,Elemental Shard,5,20,870,Merchant,Mertha,1642536032,Vendor
+i:24510,Primordial Core,1,4,990,Merchant,Mertha,1642536032,Vendor
+i:141387,?,1,5,250000,Merchant,Mertha,1642536032,Vendor
+i:132184,Intact Shimmering Scale,1,6,1946,Merchant,Mertha,1642536032,Vendor
+i:132233,Lingering Essence,1,6,2187,Merchant,Mertha,1642536032,Vendor
+i:27804::1:6710:1:9:28,?,1,1,9636,Merchant,Mertha,1642536036,Vendor
+i:24476,Jaggal Clam,4,4,100,Merchant,Mertha,1642536041,Vendor
+i:25054::2:1690:6654:1:9:27,?,1,1,35498,Merchant,Mertha,1642536041,Vendor
+i:24886::2:1676:6654:1:9:27,?,1,1,3940,Merchant,Mertha,1642536042,Vendor
+i:24905::2:1676:6654:1:9:27,?,1,1,3925,Merchant,Mertha,1642536042,Vendor
+i:121598::1:3631:1:9:26,?,1,1,3949,Merchant,Mertha,1642536043,Vendor
+i:121574::2:6691:6703:1:9:28,?,1,1,20269,Merchant,Mertha,1642536045,Vendor
+i:132280::1:4790:1:9:28,?,1,1,6361,Merchant,Mertha,1642536047,Vendor
+i:24401,Unidentified Plant Parts,1,1,750,Merchant,Mertha,1642536053,Vendor
+i:4499,?,1,2,25000,Merchant,Mertha,1642536168,Vendor
+i:157787,?,1,1,1,Merchant,Mertha,1642536169,Vendor
+i:29451,Clefthoof Ribs,1,1,400,Merchant,Mertha,1642536170,Vendor
+i:27855,Mag'har Grainbread,1,1,280,Merchant,Mertha,1642536170,Vendor
+i:33448,Runic Mana Potion,1,1,6000,Merchant,Mertha,1642536170,Vendor
+i:154897,Stringy Loins,2,2,625,Merchant,Mertha,1642536173,Vendor
+i:140310,?,1,1,100000,Merchant,Mertha,1642536261,Vendor
+i:43851,Fur Clothing Scraps,1,2,1000,Merchant,Mertha,1642538369,Vendor
+i:33403::1:6656:1:9:29,?,1,2,3500,Merchant,Mertha,1642538369,Vendor
+i:36036::2:1676:6654:1:9:29,?,1,1,7950,Merchant,Mertha,1642538375,Vendor
+i:157699,?,1,1,5,Merchant,Mertha,1642538376,Vendor
+i:51987::2:1676:4244:1:9:19,?,1,1,2688,Merchant,Mertha,1642538377,Vendor
+i:37097,Scroll of Versatility VII,1,1,247,Merchant,Mertha,1642538385,Vendor
+i:33452,Honey-Spiced Lichen,1,1,425,Merchant,Mertha,1642538387,Vendor
+i:2587,Gray Woolen Shirt,1,1,1709905,Høstø,Asharilari,1642547026,Auction
+i:2579,Green Linen Shirt,1,1,2676625,Zaliara,Asharilari,1642551476,Auction
+i:9998,Black Mageweave Vest,1,1,3605820,Canardfreezé,Asharilari,1642555177,Auction
+i:123918,Leystone Ore,2,2,190000,Gerwyn-Eldre'Thalas,Asharilari,1642683638,Auction
+i:132204,Sticky Volatile Substance,14,14,2097,Merchant,Mertha,1642872780,Vendor
+i:81200,Vial of Swirling Mist,1,3,951,Merchant,Mertha,1642872781,Vendor
+i:132199,Congealed Felblood,2,6,29457,Merchant,Mertha,1642872781,Vendor
+i:27892::1:6710:1:9:26,?,1,1,8483,Merchant,Mertha,1642872783,Vendor
+i:113757::2:1683:4244:1:9:33,?,1,1,13770,Merchant,Mertha,1642872784,Vendor
+i:121643::1:4790:1:9:22,?,1,1,3341,Merchant,Mertha,1642872784,Vendor
+i:118877::1:6658:1:9:16,?,1,1,4381,Merchant,Mertha,1642872785,Vendor
+i:51985::2:1690:4244:1:9:28,?,1,1,7022,Merchant,Mertha,1642872786,Vendor
+i:112431::1:6691:1:9:13,?,1,1,2452,Merchant,Mertha,1642872786,Vendor
+i:143974::2:6652:6710:1:9:32,?,1,1,15681,Merchant,Mertha,1642872787,Vendor
+i:51990::2:1704:4244:1:9:30,?,1,1,13185,Merchant,Mertha,1642872787,Vendor
+i:51990::2:1676:4244:1:9:33,?,1,1,16253,Merchant,Mertha,1642872787,Vendor
+i:157705,?,1,1,5,Merchant,Mertha,1642872788,Vendor
+i:81406,Roasted Barley Tea,1,1,1200,Merchant,Mertha,1642872789,Vendor
+i:81405,Boiled Silkworm Pupa,1,1,1200,Merchant,Mertha,1642872789,Vendor
+i:122582,?,1,1,15,Merchant,Thesemiramis,1642881784,Vendor
+p:1928,Firebat Pup,1,1,4725395,Thørbinaz,Asharilari,1642934650,Auction
+i:25427,Beaten Talon,1,1,990,Merchant,Mertha,1642953020,Vendor
+i:25425,Molted Feather,3,6,870,Merchant,Mertha,1642953020,Vendor
+i:25426,Brilliant Feather,6,12,1185,Merchant,Mertha,1642953020,Vendor
+i:25428,Savage Talon,1,2,1325,Merchant,Mertha,1642953020,Vendor
+i:25362::1:6656:1:9:34,?,1,3,4953,Merchant,Mertha,1642953020,Vendor
+i:141390,?,1,3,250000,Merchant,Mertha,1642953020,Vendor
+i:132204,Sticky Volatile Substance,2,6,2097,Merchant,Mertha,1642953020,Vendor
+i:132220,Broken Stem,1,6,2122,Merchant,Mertha,1642953020,Vendor
+i:132231,Worn Hooked Claw,1,6,2198,Merchant,Mertha,1642953020,Vendor
+i:121373::1:6656:1:9:35,?,1,6,4910,Merchant,Mertha,1642953020,Vendor
+i:138839,?,1,7,100000,Merchant,Mertha,1642953020,Vendor
+i:132184,Intact Shimmering Scale,3,3,1946,Merchant,Mertha,1642953733,Vendor
+i:132204,Sticky Volatile Substance,10,30,2097,Merchant,Mertha,1642953733,Vendor
+i:132220,Broken Stem,5,15,2122,Merchant,Mertha,1642953733,Vendor
+i:132223,Elemental Droplet,2,6,26442,Merchant,Mertha,1642953733,Vendor
+i:132183,Razor Tooth,2,6,28628,Merchant,Mertha,1642953733,Vendor
+i:37108::1:6710:1:9:30,?,1,1,33423,Merchant,Mertha,1642953739,Vendor
+i:25306::2:1676:6655:1:9:34,?,1,1,26341,Merchant,Mertha,1642953741,Vendor
+i:121171::2:1683:6654:1:9:36,?,1,1,15360,Merchant,Mertha,1642953741,Vendor
+i:143974::2:6652:6710:1:9:31,?,1,1,15681,Merchant,Mertha,1642953742,Vendor
+i:87299::1:6710:1:9:32,?,1,1,10407,Merchant,Mertha,1642953743,Vendor
+i:25067::2:1676:6654:1:9:34,?,1,1,34629,Merchant,Mertha,1642953743,Vendor
+i:29336::1:6710:1:9:34,?,1,1,11017,Merchant,Mertha,1642953743,Vendor
+i:31882,Ace of Blessings,1,1,25000,Merchant,Mertha,1642953747,Vendor
+i:141291::1:6654:1:9:36,?,1,1,11835,Merchant,Mertha,1642953749,Vendor
+i:124118,Fatty Bearsteak,1,1,30,Merchant,Mertha,1642953751,Vendor
+i:121214::2:1704:6654:1:9:36,?,1,1,15942,Merchant,Mertha,1642953751,Vendor
+i:29451,Clefthoof Ribs,2,2,400,Merchant,Mertha,1642953753,Vendor
+i:28399,Filtered Draenic Water,1,1,280,Merchant,Mertha,1642953753,Vendor
+i:4324,Azure Silk Vest,1,1,3900415,Aleja-Eldre'Thalas,Asharilari,1642951243,Auction
+p:2586,Amberglow Stinger,1,1,47500000,Sanloca,Asharilari,1643285403,Auction
+i:176809,Cracked Actuator,3,6,4534,Merchant,Hovra,1643302029,Vendor
+i:176807,Dented Armorplate,1,2,13450,Merchant,Hovra,1643302029,Vendor
+i:176866,Putrid Sludge,13,26,3943,Merchant,Hovra,1643302029,Vendor
+i:176853,Spindly Flesh,13,52,3780,Merchant,Hovra,1643302029,Vendor
+i:176874,Desiccated Humerus,6,24,11882,Merchant,Hovra,1643302029,Vendor
+i:176875,Crooked Horn,2,8,12626,Merchant,Hovra,1643302029,Vendor
+i:176870,Skeletal Tusk,3,12,12706,Merchant,Hovra,1643302029,Vendor
+i:176869,Bone Chip,6,36,4410,Merchant,Hovra,1643302029,Vendor
+i:176867,Fractured Shackle,3,18,3688,Merchant,Hovra,1643302029,Vendor
+i:176852,Hardened Tail Bone,1,6,12945,Merchant,Hovra,1643302029,Vendor
+i:176986::4:40:1683:6907:7575:1:9:60,?,1,1,242392,Merchant,Hovra,1643302037,Vendor
+i:181727,?,25,25,512406,Merchant,Hovra,1643302449,Vendor
+i:181722,?,5,10,356382,Merchant,Hovra,1643302449,Vendor
+i:181722,?,50,100,356382,Merchant,Hovra,1643302449,Vendor
+i:181725,?,11,22,892525,Merchant,Hovra,1643302449,Vendor
+i:181723,?,2,6,2105360,Merchant,Hovra,1643302449,Vendor
+i:181728,?,30,90,249668,Merchant,Hovra,1643302449,Vendor
+i:187491,?,1,1,69128,Merchant,Hovra,1643303744,Vendor
+i:187445,?,1,2,82437,Merchant,Hovra,1643303744,Vendor
+i:187485,?,1,2,88546,Merchant,Hovra,1643303744,Vendor
+i:185479,Sinuous Wing Membrane,10,30,3525,Merchant,Hovra,1643303744,Vendor
+i:176862,Marred Skin,2,6,3525,Merchant,Hovra,1643303744,Vendor
+i:178178,Brittle Bark,2,8,3884,Merchant,Hovra,1643303744,Vendor
+i:185476,Flowing Ridge Spikes,6,24,12945,Merchant,Hovra,1643303744,Vendor
+i:185737,Small Chain Links,1,2,4159,Merchant,Hovra,1643448811,Vendor
+i:176882,Spotless Skull,1,2,180863,Merchant,Hovra,1643448811,Vendor
+i:176869,Bone Chip,2,8,4410,Merchant,Hovra,1643448811,Vendor
+i:176862,Marred Skin,1,4,3525,Merchant,Hovra,1643448811,Vendor
+p:2582,Baoh-Xi,1,1,33250000,Monkeyd-MarécagedeZangar,Asharilari,1643367489,Auction
+i:15540,Wicked Chain Helmet,1,1,25114770,Ryüzån,Asharilari,1643385883,Auction
+i:4330,Stylish Red Shirt,1,1,1935150,Touchemoepo,Asharilari,1643393633,Auction
+i:178178,Brittle Bark,7,7,3884,Merchant,Hovra,1643451165,Vendor
+i:173874,Twisted Sediment,1,2,12932,Merchant,Hovra,1643451165,Vendor
+i:185479,Sinuous Wing Membrane,9,18,3525,Merchant,Hovra,1643451165,Vendor
+i:185476,Flowing Ridge Spikes,4,24,12945,Merchant,Hovra,1643451165,Vendor
+i:176862,Marred Skin,1,6,3525,Merchant,Hovra,1643451165,Vendor
+i:185482,Socketed Crest,1,6,146572,Merchant,Hovra,1643451165,Vendor
+i:185479,Sinuous Wing Membrane,2,2,3525,Merchant,Hovra,1643451854,Vendor
+i:187470,?,1,1,82112,Merchant,Hovra,1643451854,Vendor
+i:187485,?,1,2,88546,Merchant,Hovra,1643451854,Vendor
+i:186734::3:1472:6646:6652,?,1,1,629922,Merchant,Hovra,1643451858,Vendor
+i:187489,?,1,1,83678,Merchant,Hovra,1643453508,Vendor
+i:187498,?,1,3,991914,Merchant,Hovra,1643453508,Vendor
+i:187497,?,1,3,1025430,Merchant,Hovra,1643453508,Vendor
+i:176426::1:6909:1:9:60,?,1,3,98094,Merchant,Hovra,1643453508,Vendor
+i:176809,Cracked Actuator,6,18,4534,Merchant,Hovra,1643453508,Vendor
+i:176810,Centurion Core,1,3,147529,Merchant,Hovra,1643453508,Vendor
+i:176415::1:6909:1:9:60,?,1,3,155010,Merchant,Hovra,1643453508,Vendor
+i:184565,?,5,10,1647080,Merchant,Hovra,1643453848,Vendor
+i:184564,?,1,2,6080480,Merchant,Hovra,1643453848,Vendor
+i:184563,?,1,3,4369866,Merchant,Hovra,1643453848,Vendor
+i:182161,?,4,12,1711360,Merchant,Hovra,1643453848,Vendor
+i:181379,?,16,64,860651,Merchant,Hovra,1643453848,Vendor
+p:2079,Discarded Experiment,1,1,47490405,Demonyo-MarécagedeZangar,Asharilari,1643449379,Auction
+i:4344,Brown Linen Shirt,1,1,896230,Alifia-Sinstralis,Asharilari,1643460811,Auction
+i:177763::1:6909:1:9:60,?,1,3,146598,Merchant,Hovra,1643471658,Vendor
+i:177744::1:6909:1:9:60,?,1,3,196602,Merchant,Hovra,1643471658,Vendor
+i:178113,Twitching Stone,1,3,3896,Merchant,Hovra,1643471658,Vendor
+i:177737::1:6909:1:9:60,?,1,3,96265,Merchant,Hovra,1643471658,Vendor
+i:69863,Golden Necklace,1,1,103750,Merchant,Hovra,1643474823,Vendor
+i:69864,Tarnished Crown,1,1,221750,Merchant,Hovra,1643474823,Vendor
+i:69865,Gem Studded Bracelets,1,1,330387,Merchant,Hovra,1643474824,Vendor
+i:186734::3:1479:6646:6652,?,1,1,632493,Merchant,Hovra,1643474826,Vendor
+i:180624,Faintly Glowing Vellum,6,12,3648,Merchant,Hovra,1643480957,Vendor
+i:183945,Enlarged Nerve,3,6,15258,Merchant,Hovra,1643480957,Vendor
+i:176869,Bone Chip,11,33,4410,Merchant,Hovra,1643480957,Vendor
+i:176885,Wisp of Extinction,1,3,150081,Merchant,Hovra,1643480957,Vendor
+i:176868,Sliver of Entropy,1,3,4438,Merchant,Hovra,1643480957,Vendor
+i:176876,Collapsed Psyche,1,3,11630,Merchant,Hovra,1643480957,Vendor
+i:176859,Tempered Carapace,1,4,3521,Merchant,Hovra,1643480957,Vendor
+i:176853,Spindly Flesh,6,30,3780,Merchant,Hovra,1643480957,Vendor
+p:2904,Violet Dredwing Pup,1,1,37980715,Szp,Asharilari,1643483287,Auction
+i:7048,Azure Silk Hood,1,1,477470,Prêtrassia,Asharilari,1643491825,Auction
+i:10024,Black Mageweave Headband,1,1,2253400,Prêtrassia,Asharilari,1643492059,Auction
+i:10055,Pink Mageweave Shirt,1,1,4446000,Frelon-Cho'gall,Asharilari,1643500545,Auction
+i:44554,Flying Carpet,1,1,28499905,Hastérios,Asharilari,1643538303,Auction
+i:180732,Rune Etched Vial,20,20,118655,Multiple Buyers,Hovra,1643553819,Auction
+i:25456,Glowing Spores,7,7,870,Merchant,Enle,1643555913,Vendor
+i:25451,Swamp Moss,14,42,1185,Merchant,Enle,1643555913,Vendor
+i:25384::1:6656:1:9:25,?,1,3,2374,Merchant,Enle,1643555913,Vendor
