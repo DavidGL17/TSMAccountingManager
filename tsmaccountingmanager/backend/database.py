@@ -2,7 +2,7 @@ from ZODB import DB
 import os
 from persistent.dict import PersistentDict
 import transaction
-from .models import Category, Item
+from .models import Category, Item, Purchase, Sale
 
 
 class SingletonZODB:
@@ -71,5 +71,42 @@ def add_new_item(item_id: int, item_name: str) -> bool:
     zodb.dbroot["app_data"]["items"][str(item_id)] = Item(
         id=item_id, name=item_name, category=zodb.dbroot["app_data"]["categories"].get("0").id
     )
+    transaction.commit()
+    return True
+
+
+def add_new_purchase(purchase: Purchase) -> bool:
+    """
+    Adds a new purchase to the database.
+
+    Arguments:
+        purchase {Purchase} -- The purchase to add.
+
+    Returns:
+        bool -- True if the purchase was added, False otherwise.
+    """
+    # Check if the expense already exists
+    if str(purchase.id) in zodb.dbroot["app_data"]["purchases"]:
+        return False
+    # Add the purchase
+    zodb.dbroot["app_data"]["purchases"][str(purchase.id)] = purchase
+    transaction.commit()
+    return True
+
+
+def add_new_sale(sale: Sale) -> bool:
+    """
+    Adds a new sale to the database.
+
+    Arguments:
+        sale {Sale} -- The sale to add.
+
+    Returns:
+        bool -- True if the sale was added, False otherwise.
+    """
+    # Check if the sale already exists
+    if str(sale.id) in zodb.dbroot["app_data"]["sales"]:
+        return False
+    zodb.dbroot["app_data"]["sales"][str(sale.id)] = sale
     transaction.commit()
     return True

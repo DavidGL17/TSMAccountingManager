@@ -1,5 +1,8 @@
-from tsmaccountingmanager.backend.database import zodb, add_new_item, check_item_exists
+from tsmaccountingmanager.backend.database import zodb, add_new_item, check_item_exists, add_new_purchase, add_new_sale
+from tsmaccountingmanager.backend.data_handler import process_expenses, process_sales
 import transaction
+from general_utils import test_data_expenses_path, test_data_sales_path
+import pandas as pd
 
 
 def test_database_init():
@@ -37,3 +40,25 @@ def test_add_new_item():
     # cleanup
     del zodb.dbroot["app_data"]["items"][str(item_id)]
     transaction.commit()
+
+
+def test_add_new_purchase():
+    expensesDF = pd.read_csv(test_data_expenses_path)
+    purchases = process_expenses(expensesDF)
+    for purchase in purchases:
+        assert add_new_purchase(purchase)
+        # cleanup
+        zodb.dbroot["app_data"]["items"].pop(str(purchase.item))
+        zodb.dbroot["app_data"]["purchases"].pop(str(purchase.id))
+        transaction.commit()
+
+
+def test_add_new_sale():
+    salesDF = pd.read_csv(test_data_sales_path)
+    sales = process_sales(salesDF)
+    for sale in sales:
+        assert add_new_sale(sale)
+        # cleanup
+        zodb.dbroot["app_data"]["items"].pop(str(sale.item))
+        zodb.dbroot["app_data"]["sales"].pop(str(sale.id))
+        transaction.commit()

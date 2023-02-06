@@ -2,7 +2,7 @@
 The main part of the backend, which handles requests from the frontend and accesses the database.
 """
 
-from .database import add_new_item
+from .database import add_new_item, add_new_purchase, add_new_sale
 import pandas as pd
 from .models import Purchase, Sale, extract_item_id, process_price, process_timestamp, get_correct_source
 
@@ -66,6 +66,10 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
         time = process_timestamp(row["time"])
         source = get_correct_source(row["source"])
 
+        # if sale is to a vendor, or if name == '?', ignore it
+        if source == "vendor" or itemName == "?":
+            continue
+
         # if item not in database, add it
         add_new_item(itemId, itemName)
 
@@ -81,3 +85,25 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
         )
         result.append(sale)
     return result
+
+
+def insert_purchases(purchases: list[Purchase]) -> None:
+    """
+    Inserts the purchases into the database.
+
+    Arguments:
+        purchases {list[Purchase]} -- The purchases to insert.
+    """
+    for purchase in purchases:
+        add_new_purchase(purchase)
+
+
+def insert_sales(sales: list[Sale]) -> None:
+    """
+    Inserts the sales into the database.
+
+    Arguments:
+        sales {list[Sale]} -- The sales to insert.
+    """
+    for sale in sales:
+        add_new_sale(sale)
