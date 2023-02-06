@@ -2,9 +2,9 @@
 The main part of the backend, which handles requests from the frontend and accesses the database.
 """
 
-from .database import zodb
+from .database import add_new_item
 import pandas as pd
-from .models import Purchase, Sale
+from .models import Purchase, Sale, extract_item_id, process_price, process_timestamp, get_correct_source
 
 
 def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
@@ -17,20 +17,67 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
     Returns:
         list[Purchase] -- A list of purchases.
     """
-    zodb.dbroot
-    # TODO create function once the database is set up
-    pass
+    result = []
+    # process the dataframe
+    for index, row in expenses.iterrows():
+        itemId = extract_item_id(row["itemString"])
+        itemName = row["itemName"]
+        stackSize = row["stackSize"]
+        quantity = row["quantity"]
+        price, total = process_price(row["price"], stackSize)
+        time = process_timestamp(row["time"])
+        source = get_correct_source(row["source"])
+
+        # if item not in database, add it
+        add_new_item(itemId, itemName)
+
+        # create the purchase
+        purchase = Purchase(
+            item=itemId,
+            stackSize=stackSize,
+            quantity=quantity,
+            price=price,
+            total=total,
+            time=time,
+            source=source,
+        )
+        result.append(purchase)
+    return result
 
 
-def process_revenue(revenue: pd.DataFrame) -> list[Sale]:
+def process_sales(sales: pd.DataFrame) -> list[Sale]:
     """
-    Processes the revenue dataframe and returns a list of sales.
+    Processes the sales dataframe and returns a list of sales.
 
     Arguments:
-        revenue {pd.DataFrame} -- The revenue dataframe.
+        sales {pd.DataFrame} -- The sales dataframe.
 
     Returns:
         list[Sale] -- A list of sales.
     """
-    # TODO create function once the database is set up
-    pass
+    result = []
+    # process the dataframe
+    for index, row in sales.iterrows():
+        itemId = extract_item_id(row["itemString"])
+        itemName = row["itemName"]
+        stackSize = row["stackSize"]
+        quantity = row["quantity"]
+        price, total = process_price(row["price"], stackSize)
+        time = process_timestamp(row["time"])
+        source = get_correct_source(row["source"])
+
+        # if item not in database, add it
+        add_new_item(itemId, itemName)
+
+        # create the sale
+        sale = Sale(
+            item=itemId,
+            stackSize=stackSize,
+            quantity=quantity,
+            price=price,
+            total=total,
+            time=time,
+            source=source,
+        )
+        result.append(sale)
+    return result

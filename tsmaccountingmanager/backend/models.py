@@ -30,11 +30,11 @@ class Purchase(Persistent):
         source: the source of the purchase
     """
 
-    stackSize: int
+    item: int
     quantity: int
+    stackSize: int
     price: float
     total: float
-    item: int
     time: datetime
     source: Source
 
@@ -82,7 +82,7 @@ class Item(Persistent):
 @dataclass
 class Category(Persistent):
     """
-    A category of items.
+    A category of items. The Default category has the id 0.
 
     Attributes:
         id: the id of the category
@@ -94,6 +94,8 @@ class Category(Persistent):
 
     def __post_init__(self):
         self.id = uuid.uuid4().int
+        if self.name == "Default":
+            self.id = 0
 
 
 def process_timestamp(timestamp: int) -> datetime:
@@ -128,3 +130,37 @@ def process_price(price: int, quantity: int) -> tuple[float, float]:
     gold = price / 10000
     total = gold * quantity
     return gold, total
+
+
+def extract_item_id(item: str) -> int:
+    """
+    Extracts the item id from the item string.
+
+    Arguments:
+        item {str} -- The item string. Has the following format: "i:item_id"
+
+    Returns:
+        int -- The item id.
+    """
+    return int(item.split(":")[1])
+
+
+def get_correct_source(source: str) -> Source:
+    """
+    Returns the correct source based on the source string.
+
+    Arguments:
+        source {str} -- The source string.
+
+    Returns:
+        Source -- The correct source.
+
+    Raises:
+        ValueError: If the source string is invalid.
+    """
+    if source == "Auction":
+        return Source.AUCTION
+    elif source == "Vendor":
+        return Source.VENDOR
+    else:
+        raise ValueError(f"Invalid source: {source}")
