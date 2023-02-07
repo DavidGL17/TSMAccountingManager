@@ -19,6 +19,24 @@ To install the environment, run the following command in the root of the project
 poetry install
 ```
 
+## Usage
+
+Before running, you need to create a config.yml file in the root of the project. This file should contain the contents of the config_example.yml file. You can then edit the file to your needs.
+
+To run the app, run the following command in the root of the project:
+
+```bash
+poetry run streamlit run app.py
+```
+
 # Architecture
 
-Currently the app will be a web app using streamlit. The data will be stored in a json file, and the app will be able to read and write to it. The json file will be considered as a database using the `pysonDB` library.
+Currently the app will be a web app using streamlit. The data will be stored using a ZODB database.
+
+## Frontend
+
+As said above, the frontend will be a web app using streamlit. The idea is to have a simple and easy to use interface. It will be split into different pages to do different things. This part of the app is still in development.
+
+## Backend
+
+The backend will be a python app using ZODB to store the data. The data will be stored in a database, and will be accessible through a series of commands offered by the backend.

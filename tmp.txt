@@ -1,1 +1,0 @@
-I need to be able to check easily that a transaction has not been processed before. based on that constraint what are my options?

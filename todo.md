@@ -1,6 +1,11 @@
-# TODO
+# Todo list
 
-Contains ideas of things to do
+TODO need to set a few settings
+TODO need to add logging
+
+# Additional ideas, not in the scope of the project currently
+
+Contains ideas of things to do in a future version of the project.
 
 ## Make desktop app instead of web app
 
@@ -8,10 +13,3 @@ Contains ideas of things to do
 -   Then Install Nativefier npm install -g nativefier
 -   Then Run `nativefier --name '<you .exe name>' '<your streamlit sharing website url>' --platform <'windows' or 'mac' or 'linux'>`
 -   Then In your current Directory You should see <AppName>-32-x64 folder or similar if you have chosen windows run the .exe file and you have you software
-
-## database
-
-Going with ZODB
-
-TODO need to set a few settings
-TODO need to add logging
