@@ -12,3 +12,6 @@ Contains ideas of things to do
 ## database
 
 Going with ZODB
+
+TODO need to set a few settings
+TODO need to add logging
