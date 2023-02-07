@@ -9,6 +9,9 @@ from persistent import Persistent
 from dataclasses import dataclass, field
 import pytz
 
+from ..utils.config import timezone
+from ..utils.logger import logger
+
 
 class Source(enum.Enum):
     AUCTION = 1
@@ -149,7 +152,7 @@ def process_timestamp(timestamp: int) -> datetime:
     """
     delta = timestamp
     # TODO find a way to get the timezone from the user, probably using the user's locale or a setting
-    tz = pytz.timezone("Europe/Zurich")
+    tz = pytz.timezone(timezone)
     date = datetime.fromtimestamp(delta, tz=tz)
     return date
 
@@ -202,4 +205,5 @@ def get_correct_source(source: str) -> Source:
     elif source == "Vendor":
         return Source.VENDOR
     else:
+        logger.error(f"Invalid source: {source}")
         raise ValueError(f"Invalid source: {source}")

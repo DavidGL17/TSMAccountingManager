@@ -26,7 +26,7 @@ Before running, you need to create a config.yml file in the root of the project.
 To run the app, run the following command in the root of the project:
 
 ```bash
-poetry run streamlit run app.py
+poetry run streamlit run tsmaccountingmanager/main.py
 ```
 
 # Architecture

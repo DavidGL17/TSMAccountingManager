@@ -18,9 +18,10 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Setup the environment
-      # This moves the correct test files for the big tests
+      # This moves the correct test files for the big tests, and the config file
         run: |
           mv tests/data/full_data_expenses_wf.csv tests/data/full_data_expenses.csv
-          mv tests/data/full_data_sales_wf.csv tests/data/full_data_income.csv
+          mv tests/data/full_data_sales_wf.csv tests/data/full_data_income.
+          mv config_example.yml config.yml
       - name: Test with pytest
         run: poetry run pytest tests

@@ -5,6 +5,7 @@ The main part of the backend, which handles requests from the frontend and acces
 from .database import add_new_item, add_new_purchase, add_new_sale
 import pandas as pd
 from .models import Purchase, Sale, extract_item_id, process_price, process_timestamp, get_correct_source, Source
+from ..utils.logger import logger
 
 
 def check_if_transaction_is_acceptable(item_name: str, source: Source) -> bool:
@@ -37,6 +38,7 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
     Returns:
         list[Purchase] -- A list of purchases.
     """
+    logger.info("Processing new expenses...")
     result = []
     # process the dataframe
     for index, row in expenses.iterrows():
@@ -67,8 +69,12 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
         )
         result.append(purchase)
 
+    ctr = 0
     for purchase in result:
-        add_new_purchase(purchase)
+        if add_new_purchase(purchase):
+            ctr += 1
+
+    logger.info(f"Finished processing new expenses. Added {ctr} new purchases.")
 
     return result
 
@@ -84,6 +90,7 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
     Returns:
         list[Sale] -- A list of sales.
     """
+    logger.info("Processing new sales...")
     result = []
     # process the dataframe
     for index, row in sales.iterrows():
@@ -114,8 +121,11 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
         add_new_item(itemId, itemName)
 
         result.append(sale)
-
+    ctr = 0
     for sale in result:
-        add_new_sale(sale)
+        if add_new_sale(sale):
+            ctr += 1
+
+    logger.info(f"Finished processing new sales. Added {ctr} new sales.")
 
     return result
