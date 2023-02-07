@@ -3,6 +3,7 @@ import os
 from persistent.dict import PersistentDict
 import transaction
 from .models import Category, Item, Purchase, Sale
+from ..utils.config import db_folder
 from datetime import datetime
 
 
@@ -17,9 +18,9 @@ class SingletonZODB:
 
     def __init__(self):
         # check if data folder exists, otherwise create it
-        if not os.path.exists("data"):
-            os.mkdir("data")
-        self.db = DB("data/data.fs")
+        if not os.path.exists(db_folder):
+            os.mkdir(db_folder)
+        self.db = DB(os.path.join(db_folder, "data.fs"))
         self.conn = self.db.open()
         self.dbroot = self.conn.root()
 
