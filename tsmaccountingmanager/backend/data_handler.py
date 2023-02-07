@@ -28,7 +28,8 @@ def check_if_transaction_is_acceptable(item_name: str, source: Source) -> bool:
 
 def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
     """
-    Processes the expenses dataframe and returns a list of purchases.
+    Processes the expenses dataframe and adds them to the database.
+    Adds new items to the database if they are not already in it. Returns a list of purchases.
 
     Arguments:
         expenses {pd.DataFrame} -- The expenses dataframe.
@@ -65,12 +66,17 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
             source=source,
         )
         result.append(purchase)
+
+    for purchase in result:
+        add_new_purchase(purchase)
+
     return result
 
 
 def process_sales(sales: pd.DataFrame) -> list[Sale]:
     """
-    Processes the sales dataframe and returns a list of sales.
+    Processes the sales dataframe and adds them to the database.
+    Adds new items to the database if they are not already in it. Returns a list of sales.
 
     Arguments:
         sales {pd.DataFrame} -- The sales dataframe.
@@ -108,26 +114,8 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
         add_new_item(itemId, itemName)
 
         result.append(sale)
-    return result
 
-
-def insert_purchases(purchases: list[Purchase]) -> None:
-    """
-    Inserts the purchases into the database.
-
-    Arguments:
-        purchases {list[Purchase]} -- The purchases to insert.
-    """
-    for purchase in purchases:
-        add_new_purchase(purchase)
-
-
-def insert_sales(sales: list[Sale]) -> None:
-    """
-    Inserts the sales into the database.
-
-    Arguments:
-        sales {list[Sale]} -- The sales to insert.
-    """
-    for sale in sales:
+    for sale in result:
         add_new_sale(sale)
+
+    return result
