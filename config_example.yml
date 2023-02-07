@@ -1,0 +1,10 @@
+# General config
+timezone: "Europe/Zurich"
+
+# Database config
+db_folder: "data"
+
+# Logging config
+logging_level: "INFO"
+log_file: "TSMAccountingManager.log"
+
