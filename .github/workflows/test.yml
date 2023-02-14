@@ -24,4 +24,4 @@ jobs:
           mv tests/data/full_data_sales_wf.csv tests/data/full_data_income.
           mv config_example.yml config.yml
       - name: Test with pytest
-        run: poetry run pytest tests
+        run: poetry poe test
