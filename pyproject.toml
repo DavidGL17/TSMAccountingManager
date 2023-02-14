@@ -21,9 +21,11 @@ pytest = "^7.2.0"
 flake8 = "^5.0.4"
 black = "^22.10.0"
 ipykernel = "^6.21.1"
+poethepoet = "^0.18.1"
 
-[tool.poetry.scripts]
-main = "tsmaccountingmanager.main:main"
+[tool.poe.tasks]
+lint = "poetry run flake8 tsmaccountingmanager tests"
+test = "poetry run pytest tests"
 
 [build-system]
 requires = ["poetry-core"]
