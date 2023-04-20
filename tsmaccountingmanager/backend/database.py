@@ -9,6 +9,7 @@ from datetime import datetime
 
 class SingletonZODB:
     _instance = None
+    _initialized = False
 
     @classmethod
     def instance(cls):
@@ -17,29 +18,47 @@ class SingletonZODB:
         return cls._instance
 
     def __init__(self):
-        # check if data folder exists, otherwise create it
-        if not os.path.exists(db_folder):
-            os.mkdir(db_folder)
+        self.db = None
+        self.conn = None
+        self.dbroot = None
+        if not SingletonZODB._initialized:
+            # check if data folder exists, otherwise create it
+            if not os.path.exists(db_folder):
+                print("MEEEEEEEEEEEEEEEEEEEEEEEERDE")
+                os.mkdir(db_folder)
+
+            self.db = DB(os.path.join(db_folder, "data.fs"))
+            self.conn = self.db.open()
+            self.dbroot = self.conn.root()
+
+            if "app_data" not in self.dbroot:
+                # init the database
+                self.dbroot["app_data"] = PersistentDict()
+                self.dbroot["app_data"]["items"] = PersistentDict()
+                self.dbroot["app_data"]["categories"] = PersistentDict()
+                self.dbroot["app_data"]["purchases"] = PersistentDict()
+                self.dbroot["app_data"]["sales"] = PersistentDict()
+
+                # add a default category
+                category = Category(name="Default")
+                self.dbroot["app_data"]["categories"][str(category.id)] = category
+                transaction.commit()
+
+            SingletonZODB._initialized = True
+            self.db.close()
+
+    def __enter__(self):
         self.db = DB(os.path.join(db_folder, "data.fs"))
         self.conn = self.db.open()
         self.dbroot = self.conn.root()
+        tmp = self.instance()
+        print(type(tmp))
+        return tmp
 
-        if "app_data" not in self.dbroot:
-            print("Initializing database...")
-            # init the database
-            self.dbroot["app_data"] = PersistentDict()
-            self.dbroot["app_data"]["items"] = PersistentDict()
-            self.dbroot["app_data"]["categories"] = PersistentDict()
-            self.dbroot["app_data"]["purchases"] = PersistentDict()
-            self.dbroot["app_data"]["sales"] = PersistentDict()
-
-            # add a default category
-            category = Category(name="Default")
-            self.dbroot["app_data"]["categories"][str(category.id)] = category
-            transaction.commit()
-
-
-zodb = SingletonZODB.instance()
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.db is not None:
+            self.db.close()
+        return False
 
 
 ###
@@ -57,7 +76,8 @@ def check_item_exists(item_id: int) -> bool:
     Returns:
         bool -- True if the item exists, False otherwise.
     """
-    return str(item_id) in zodb.dbroot["app_data"]["items"]
+    with SingletonZODB() as zodb:
+        return str(item_id) in zodb.dbroot["app_data"]["items"]
 
 
 def add_new_item(item_id: int, item_name: str) -> bool:
@@ -75,9 +95,10 @@ def add_new_item(item_id: int, item_name: str) -> bool:
     """
     if check_item_exists(item_id):
         return False
-    zodb.dbroot["app_data"]["items"][str(item_id)] = Item(
-        id=item_id, name=item_name, category=zodb.dbroot["app_data"]["categories"].get("0").id
-    )
+    with SingletonZODB() as zodb:
+        zodb.dbroot["app_data"]["items"][str(item_id)] = Item(
+            id=item_id, name=item_name, category=zodb.dbroot["app_data"]["categories"].get("0").id
+        )
     transaction.commit()
     return True
 
@@ -93,11 +114,12 @@ def add_new_purchase(purchase: Purchase) -> bool:
         bool -- True if the purchase was added, False otherwise.
     """
     # Check if the expense already exists
-    if str(purchase.id) in zodb.dbroot["app_data"]["purchases"]:
-        return False
-    # Add the purchase
-    zodb.dbroot["app_data"]["purchases"][str(purchase.id)] = purchase
-    transaction.commit()
+    with SingletonZODB() as zodb:
+        if str(purchase.id) in zodb.dbroot["app_data"]["purchases"]:
+            return False
+        # Add the purchase
+        zodb.dbroot["app_data"]["purchases"][str(purchase.id)] = purchase
+        transaction.commit()
     return True
 
 
@@ -112,10 +134,12 @@ def add_new_sale(sale: Sale) -> bool:
         bool -- True if the sale was added, False otherwise.
     """
     # Check if the sale already exists
-    if str(sale.id) in zodb.dbroot["app_data"]["sales"]:
-        return False
-    zodb.dbroot["app_data"]["sales"][str(sale.id)] = sale
-    transaction.commit()
+    with SingletonZODB() as zodb:
+        if str(sale.id) in zodb.dbroot["app_data"]["sales"]:
+            return False
+        # Add the sale
+        zodb.dbroot["app_data"]["sales"][str(sale.id)] = sale
+        transaction.commit()
     return True
 
 
@@ -130,10 +154,11 @@ def add_new_category(category: Category) -> bool:
         bool -- True if the category was added, False otherwise.
     """
     # Check if the category already exists
-    if str(category.id) in zodb.dbroot["app_data"]["categories"]:
-        return False
-    zodb.dbroot["app_data"]["categories"][str(category.id)] = category
-    transaction.commit()
+    with SingletonZODB() as zodb:
+        if str(category.id) in zodb.dbroot["app_data"]["categories"]:
+            return False
+        zodb.dbroot["app_data"]["categories"][str(category.id)] = category
+        transaction.commit()
     return True
 
 
@@ -151,7 +176,8 @@ def get_purchases() -> list:
     Returns:
         list -- A list of purchases.
     """
-    return list(zodb.dbroot["app_data"]["purchases"].values())
+    with SingletonZODB() as zodb:
+        return list(zodb.dbroot["app_data"]["purchases"].values())
 
 
 def get_purchases_by_time(start: datetime, end: datetime) -> list:
@@ -165,9 +191,10 @@ def get_purchases_by_time(start: datetime, end: datetime) -> list:
     Returns:
         list -- A list of purchases.
     """
-    filtered_purchases = [
-        purchase for purchase in zodb.dbroot["app_data"]["purchases"].values() if start <= purchase.time <= end
-    ]
+    with SingletonZODB() as zodb:
+        filtered_purchases = [
+            purchase for purchase in zodb.dbroot["app_data"]["purchases"].values() if start <= purchase.time <= end
+        ]
     return filtered_purchases
 
 
@@ -181,9 +208,10 @@ def get_purchases_by_item(item_id: int) -> list:
     Returns:
         list -- A list of purchases.
     """
-    filtered_purchases = [
-        purchase for purchase in zodb.dbroot["app_data"]["purchases"].values() if purchase.item == item_id
-    ]
+    with SingletonZODB() as zodb:
+        filtered_purchases = [
+            purchase for purchase in zodb.dbroot["app_data"]["purchases"].values() if purchase.item == item_id
+        ]
     return filtered_purchases
 
 
@@ -197,11 +225,12 @@ def get_purchases_by_category(category_id: int) -> list:
     Returns:
         list -- A list of purchases.
     """
-    filtered_purchases = [
-        purchase
-        for purchase in zodb.dbroot["app_data"]["purchases"].values()
-        if zodb.dbroot["app_data"]["items"][str(purchase.item)].category == category_id
-    ]
+    with SingletonZODB() as zodb:
+        filtered_purchases = [
+            purchase
+            for purchase in zodb.dbroot["app_data"]["purchases"].values()
+            if zodb.dbroot["app_data"]["items"][str(purchase.item)].category == category_id
+        ]
     return filtered_purchases
 
 
@@ -215,7 +244,8 @@ def get_sales() -> list:
     Returns:
         list -- A list of sales.
     """
-    return list(zodb.dbroot["app_data"]["sales"].values())
+    with SingletonZODB() as zodb:
+        return list(zodb.dbroot["app_data"]["sales"].values())
 
 
 def get_sales_by_time(start: datetime, end: datetime) -> list:
@@ -229,7 +259,8 @@ def get_sales_by_time(start: datetime, end: datetime) -> list:
     Returns:
         list -- A list of sales.
     """
-    filtered_sales = [sale for sale in zodb.dbroot["app_data"]["sales"].values() if start <= sale.time <= end]
+    with SingletonZODB() as zodb:
+        filtered_sales = [sale for sale in zodb.dbroot["app_data"]["sales"].values() if start <= sale.time <= end]
     return filtered_sales
 
 
@@ -243,7 +274,8 @@ def get_sales_by_item(item_id: int) -> list:
     Returns:
         list -- A list of sales.
     """
-    filtered_sales = [sale for sale in zodb.dbroot["app_data"]["sales"].values() if sale.item == item_id]
+    with SingletonZODB() as zodb:
+        filtered_sales = [sale for sale in zodb.dbroot["app_data"]["sales"].values() if sale.item == item_id]
     return filtered_sales
 
 
@@ -257,11 +289,12 @@ def get_sales_by_category(category_id: int) -> list:
     Returns:
         list -- A list of sales.
     """
-    filtered_sales = [
-        sale
-        for sale in zodb.dbroot["app_data"]["sales"].values()
-        if zodb.dbroot["app_data"]["items"][str(sale.item)].category == category_id
-    ]
+    with SingletonZODB() as zodb:
+        filtered_sales = [
+            sale
+            for sale in zodb.dbroot["app_data"]["sales"].values()
+            if zodb.dbroot["app_data"]["items"][str(sale.item)].category == category_id
+        ]
     return filtered_sales
 
 
@@ -275,7 +308,8 @@ def get_items() -> list:
     Returns:
         list -- A list of items.
     """
-    return list(zodb.dbroot["app_data"]["items"].values())
+    with SingletonZODB() as zodb:
+        return list(zodb.dbroot["app_data"]["items"].values())
 
 
 def get_item_by_id(item_id: int) -> Item:
@@ -288,7 +322,8 @@ def get_item_by_id(item_id: int) -> Item:
     Returns:
         Item -- The item.
     """
-    return zodb.dbroot["app_data"]["items"].get(str(item_id))
+    with SingletonZODB() as zodb:
+        return zodb.dbroot["app_data"]["items"].get(str(item_id))
 
 
 def get_items_by_category(category_id: int) -> list[Item]:
@@ -301,7 +336,8 @@ def get_items_by_category(category_id: int) -> list[Item]:
     Returns:
         list -- A list of items.
     """
-    filtered_items = [item for item in zodb.dbroot["app_data"]["items"].values() if item.category == category_id]
+    with SingletonZODB() as zodb:
+        filtered_items = [item for item in zodb.dbroot["app_data"]["items"].values() if item.category == category_id]
     return filtered_items
 
 
@@ -315,7 +351,8 @@ def get_categories() -> list:
     Returns:
         list -- A list of categories.
     """
-    return list(zodb.dbroot["app_data"]["categories"].values())
+    with SingletonZODB() as zodb:
+        return list(zodb.dbroot["app_data"]["categories"].values())
 
 
 def get_category_by_id(category_id: int) -> Category:
@@ -328,7 +365,8 @@ def get_category_by_id(category_id: int) -> Category:
     Returns:
         Category -- The category.
     """
-    return zodb.dbroot["app_data"]["categories"].get(str(category_id))
+    with SingletonZODB() as zodb:
+        return zodb.dbroot["app_data"]["categories"].get(str(category_id))
 
 
 ###
@@ -344,10 +382,11 @@ def delete_element(type: str, id: int):
         type {str} -- The type of the element. Can be "items", "categories", "purchases" or "sales".
         id {int} -- The id of the element.
     """
-    if type in ["items", "categories", "purchases", "sales"]:
-        if str(id) in zodb.dbroot["app_data"][type]:
-            del zodb.dbroot["app_data"][type][str(id)]
-            transaction.commit()
+    with SingletonZODB() as zodb:
+        if type in ["items", "categories", "purchases", "sales"]:
+            if str(id) in zodb.dbroot["app_data"][type]:
+                del zodb.dbroot["app_data"][type][str(id)]
+                transaction.commit()
 
 
 def delete_elements(type: str, ids: list[int]):
@@ -358,8 +397,9 @@ def delete_elements(type: str, ids: list[int]):
         type {str} -- The type of the elements. Can be "items", "categories", "purchases" or "sales".
         ids {list[int]} -- A list of the ids of the elements.
     """
-    if type in ["items", "categories", "purchases", "sales"]:
-        for id in ids:
-            if str(id) in zodb.dbroot["app_data"][type]:
-                del zodb.dbroot["app_data"][type][str(id)]
-        transaction.commit()
+    with SingletonZODB() as zodb:
+        if type in ["items", "categories", "purchases", "sales"]:
+            for id in ids:
+                if str(id) in zodb.dbroot["app_data"][type]:
+                    del zodb.dbroot["app_data"][type][str(id)]
+            transaction.commit()
