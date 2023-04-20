@@ -37,6 +37,7 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
 
     Returns:
         list[Purchase] -- A list of purchases.
+        int -- The number of purchases added to the database.
     """
     logger.info("Processing new expenses...")
     result = []
@@ -76,7 +77,7 @@ def process_expenses(expenses: pd.DataFrame) -> list[Purchase]:
 
     logger.info(f"Finished processing new expenses. Added {ctr} new purchases.")
 
-    return result
+    return result, ctr
 
 
 def process_sales(sales: pd.DataFrame) -> list[Sale]:
@@ -89,6 +90,7 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
 
     Returns:
         list[Sale] -- A list of sales.
+        int -- The number of sales added to the database.
     """
     logger.info("Processing new sales...")
     result = []
@@ -128,4 +130,4 @@ def process_sales(sales: pd.DataFrame) -> list[Sale]:
 
     logger.info(f"Finished processing new sales. Added {ctr} new sales.")
 
-    return result
+    return result, ctr

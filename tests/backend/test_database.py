@@ -1,5 +1,5 @@
 from tsmaccountingmanager.backend.database import (
-    zodb,
+    SingletonZODB,
     delete_element,
     delete_elements,
     add_new_item,
@@ -38,12 +38,13 @@ from datetime import datetime
 
 def test_database_init():
     # assert that the database is initialized
-    assert "items" in zodb.dbroot["app_data"]
-    assert "categories" in zodb.dbroot["app_data"]
-    assert "purchases" in zodb.dbroot["app_data"]
-    assert "sales" in zodb.dbroot["app_data"]
-    assert "0" in zodb.dbroot["app_data"]["categories"]
-    assert zodb.dbroot["app_data"]["categories"]["0"].name == "Default"
+    with SingletonZODB as zodb:
+        assert "items" in zodb.dbroot["app_data"]
+        assert "categories" in zodb.dbroot["app_data"]
+        assert "purchases" in zodb.dbroot["app_data"]
+        assert "sales" in zodb.dbroot["app_data"]
+        assert "0" in zodb.dbroot["app_data"]["categories"]
+        assert zodb.dbroot["app_data"]["categories"]["0"].name == "Default"
 
 
 ###
@@ -54,12 +55,14 @@ def test_database_init():
 def test_check_item_exists():
     item_id = 123456
     assert not check_item_exists(item_id)
-    assert not zodb.dbroot["app_data"]["items"].get(str(item_id))
-    assert zodb.dbroot["app_data"]["items"].get(str(item_id)) is None
-    zodb.dbroot["app_data"]["items"][str(item_id)] = "Test Item"
+    with SingletonZODB as zodb:
+        assert not zodb.dbroot["app_data"]["items"].get(str(item_id))
+        assert zodb.dbroot["app_data"]["items"].get(str(item_id)) is None
+        zodb.dbroot["app_data"]["items"][str(item_id)] = "Test Item"
     assert check_item_exists(item_id)
-    assert zodb.dbroot["app_data"]["items"].get(str(item_id))
-    assert zodb.dbroot["app_data"]["items"][str(item_id)] == "Test Item"
+    with SingletonZODB as zodb:
+        assert zodb.dbroot["app_data"]["items"].get(str(item_id))
+        assert zodb.dbroot["app_data"]["items"][str(item_id)] == "Test Item"
     # cleanup
     delete_element("items", item_id)
 
@@ -67,11 +70,13 @@ def test_check_item_exists():
 def test_add_new_item():
     item_id = 123456
     item_name = "Test Item"
-    assert not zodb.dbroot["app_data"]["items"].get(str(item_id))
-    assert zodb.dbroot["app_data"]["items"].get(str(item_id)) is None
+    with SingletonZODB as zodb:
+        assert not zodb.dbroot["app_data"]["items"].get(str(item_id))
+        assert zodb.dbroot["app_data"]["items"].get(str(item_id)) is None
     assert add_new_item(item_id, item_name)
-    assert zodb.dbroot["app_data"]["items"].get(str(item_id))
-    assert zodb.dbroot["app_data"]["items"][str(item_id)].name == item_name
+    with SingletonZODB as zodb:
+        assert zodb.dbroot["app_data"]["items"].get(str(item_id))
+        assert zodb.dbroot["app_data"]["items"][str(item_id)].name == item_name
     # cleanup
     delete_element("items", item_id)
 
@@ -95,14 +100,16 @@ def test_add_new_sale():
 def test_add_new_category():
     newCategory = Category(name="Test Category")
     # check that the category doesn't exist
-    assert not zodb.dbroot["app_data"]["categories"].get(str(newCategory.id))
+    with SingletonZODB as zodb:
+        assert not zodb.dbroot["app_data"]["categories"].get(str(newCategory.id))
 
     # add the category
     assert add_new_category(newCategory)
 
     # check that the category exists
-    assert zodb.dbroot["app_data"]["categories"].get(str(newCategory.id))
-    assert zodb.dbroot["app_data"]["categories"][str(newCategory.id)].name == "Test Category"
+    with SingletonZODB as zodb:
+        assert zodb.dbroot["app_data"]["categories"].get(str(newCategory.id))
+        assert zodb.dbroot["app_data"]["categories"][str(newCategory.id)].name == "Test Category"
 
     # assert we can't add the same category twice
     assert not add_new_category(newCategory)
@@ -117,7 +124,7 @@ def test_add_new_category():
 
 
 def test_get_purchases():
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     assert len(get_purchases()) == len(purchases)
     # make sur the purchases are the same
     for purchase in get_purchases():
@@ -128,7 +135,7 @@ def test_get_purchases():
 
 
 def test_get_purchases_by_time():
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     dates = [
         (process_timestamp(1641925077.0), process_timestamp(1641925081.0)),
         (process_timestamp(1642191157.0), process_timestamp(1642191159.0)),
@@ -146,7 +153,7 @@ def test_get_purchases_by_time():
 
 
 def test_get_purchases_by_item():
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     item_ids = [purchase.item for purchase in purchases]
     for item_id in item_ids:
         assert get_purchases_by_item(item_id) == [purchase for purchase in purchases if purchase.item == item_id]
@@ -156,7 +163,7 @@ def test_get_purchases_by_item():
 
 
 def test_get_purchases_by_category():
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     for purchase in purchases:
         add_new_purchase(purchase)
     assert get_purchases_by_category(0) == purchases
@@ -166,7 +173,7 @@ def test_get_purchases_by_category():
 
 
 def test_get_sales():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
     assert len(get_sales()) == len(sales)
     # make sur the sales are the same
     for sale in get_sales():
@@ -177,7 +184,7 @@ def test_get_sales():
 
 
 def test_get_sales_by_time():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
     dates = [
         (process_timestamp(1642069200.0), process_timestamp(1642069202.0)),
         (process_timestamp(1642334947.0), process_timestamp(1642346546.0)),
@@ -194,7 +201,7 @@ def test_get_sales_by_time():
 
 
 def test_get_sales_by_item():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
     item_ids = [sale.item for sale in sales]
     for item_id in item_ids:
         assert get_sales_by_item(item_id) == [sale for sale in sales if sale.item == item_id]
@@ -204,7 +211,7 @@ def test_get_sales_by_item():
 
 
 def test_get_sales_by_category():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
     for sale in sales:
         add_new_sale(sale)
     assert get_sales_by_category(0) == sales
@@ -214,8 +221,8 @@ def test_get_sales_by_category():
 
 
 def test_get_items():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     items = [sale.item for sale in sales] + [purchase.item for purchase in purchases]
     result = get_items()
     assert len(result) == len(items)
@@ -229,8 +236,8 @@ def test_get_items():
 
 
 def test_get_item_by_id():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     items = [sale.item for sale in sales] + [purchase.item for purchase in purchases]
     for item in items:
         res = get_item_by_id(item)
@@ -243,8 +250,8 @@ def test_get_item_by_id():
 
 
 def test_get_items_by_category():
-    sales = process_sales(pd.read_csv(test_data_sales_path))
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     items = [sale.item for sale in sales] + [purchase.item for purchase in purchases]
     result = get_items_by_category(0)
     assert len(result) == len(items)
@@ -305,12 +312,14 @@ def test_delete_element():
     newPurchase = Purchase(0, 0, 0, 0, 0, datetime.now(), Source.AUCTION)
     add_new_purchase(newPurchase)
     delete_element("purchases", newPurchase.id)
-    assert zodb.dbroot["app_data"]["purchases"].get(str(newPurchase.id)) is None
+    with SingletonZODB() as zodb:
+        assert zodb.dbroot["app_data"]["purchases"].get(str(newPurchase.id)) is None
 
     newSale = Sale(0, 0, 0, 0, 0, datetime.now(), Source.AUCTION)
     add_new_sale(newSale)
     delete_element("sales", newSale.id)
-    assert zodb.dbroot["app_data"]["sales"].get(str(newSale.id)) is None
+    with SingletonZODB() as zodb:
+        assert zodb.dbroot["app_data"]["sales"].get(str(newSale.id)) is None
 
 
 def test_delete_elements():
@@ -323,8 +332,8 @@ def test_delete_elements():
     assert result[0].id == 0
     assert result[0].name == "Default"
 
-    sales = process_sales(pd.read_csv(test_data_sales_path))
-    purchases = process_expenses(pd.read_csv(test_data_expenses_path))
+    sales, ctr = process_sales(pd.read_csv(test_data_sales_path))
+    purchases, ctr = process_expenses(pd.read_csv(test_data_expenses_path))
     items = [sale.item for sale in sales] + [purchase.item for purchase in purchases]
 
     delete_elements("items", items)

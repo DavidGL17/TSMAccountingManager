@@ -40,3 +40,7 @@ As said above, the frontend will be a web app using streamlit. The idea is to ha
 ## Backend
 
 The backend will be a python app using ZODB to store the data. The data will be stored in a database, and will be accessible through a series of commands offered by the backend.
+
+# Known issues
+
+If you import a csv file twice it will not be detected. This is due to the fact that there is no id for each transaction assigned by TSM, so it is very hard to check that the transaction is already in the database. This is something that will be fixed in the future. If anyone wants to help, feel free to do so!
